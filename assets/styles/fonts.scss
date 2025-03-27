@@ -1,0 +1,13 @@
+@mixin Title {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 4.625rem;
+  font-style: normal;
+  @include custom(650) {
+    font-size: 3rem;
+  }
+  @include custom(430) {
+    font-size: 2.2rem;
+  }
+}

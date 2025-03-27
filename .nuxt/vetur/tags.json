@@ -1,0 +1,20 @@
+{
+  "MainPageEquipment": {
+    "description": "Auto imported from components/main-page/Equipment.vue"
+  },
+  "MainPageProjects": {
+    "description": "Auto imported from components/main-page/Projects.vue"
+  },
+  "MainPageServices": {
+    "description": "Auto imported from components/main-page/Services.vue"
+  },
+  "MainPageVideo": {
+    "description": "Auto imported from components/main-page/Video.vue"
+  },
+  "LayoutsFooter": {
+    "description": "Auto imported from components/layouts/Footer.vue"
+  },
+  "LayoutsHeader": {
+    "description": "Auto imported from components/layouts/Header.vue"
+  }
+}

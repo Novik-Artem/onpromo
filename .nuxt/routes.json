@@ -1,0 +1,58 @@
+[
+  {
+    "name": "company",
+    "path": "/company",
+    "component": "D:\\\\onpromo\\\\pages\\\\company.vue",
+    "chunkName": "pages/company",
+    "_name": "_54d7ca16"
+  },
+  {
+    "name": "contacts",
+    "path": "/contacts",
+    "component": "D:\\\\onpromo\\\\pages\\\\contacts.vue",
+    "chunkName": "pages/contacts",
+    "_name": "_50ed69ea"
+  },
+  {
+    "name": "packages",
+    "path": "/packages",
+    "component": "D:\\\\onpromo\\\\pages\\\\packages\\\\index.vue",
+    "chunkName": "pages/packages/index",
+    "_name": "_d0f6c386"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\onpromo\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_78ee266c"
+  },
+  {
+    "name": "equipment-categoryId",
+    "path": "/equipment/:categoryId",
+    "component": "D:\\\\onpromo\\\\pages\\\\equipment\\\\_categoryId\\\\index.vue",
+    "chunkName": "pages/equipment/_categoryId/index",
+    "_name": "_15f13d00"
+  },
+  {
+    "name": "projects-id",
+    "path": "/projects/:id?",
+    "component": "D:\\\\onpromo\\\\pages\\\\projects\\\\_id.vue",
+    "chunkName": "pages/projects/_id",
+    "_name": "_1af5f6f8"
+  },
+  {
+    "name": "services-id",
+    "path": "/services/:id?",
+    "component": "D:\\\\onpromo\\\\pages\\\\services\\\\_id.vue",
+    "chunkName": "pages/services/_id",
+    "_name": "_3d289f94"
+  },
+  {
+    "name": "equipment-categoryId-id",
+    "path": "/equipment/:categoryId?/:id",
+    "component": "D:\\\\onpromo\\\\pages\\\\equipment\\\\_categoryId\\\\_id.vue",
+    "chunkName": "pages/equipment/_categoryId/_id",
+    "_name": "_32ab0130"
+  }
+]
