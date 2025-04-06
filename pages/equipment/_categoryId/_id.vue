@@ -1,18 +1,24 @@
 <template>
   <div :class="$style.container">
     <div :class="$style.content">
-      <div :class="$style.title">{{ equipment.name }}</div>
-      <div :class="$style.category">
-        Категория: {{ equipment.category.name }}
+      <div :class="$style.top">
+        <div :class="$style.title">{{ equipment.name }}</div>
+        <div :class="$style.img">
+          <img :src="equipment.image" alt="" />
+        </div>
       </div>
-      <div :class="$style.img">
-        <img :src="equipment.image" alt="" />
-      </div>
-      <div :class="$style.desc">
-        {{ equipment.description }}
-      </div>
-      <div :class="$style.manufacturer">
-        Производитель: {{ equipment.manufacturer }}
+      <div :class="$style.bottom">
+        <div>
+          <div :class="$style.category">
+            Категория: {{ equipment.category?.name }}
+          </div>
+          <div :class="$style.desc">
+            {{ equipment.description }}
+          </div>
+        </div>
+        <div :class="$style.manufacturer" v-if="equipment.manufacturer">
+          Производитель {{ equipment.manufacturer }}
+        </div>
       </div>
     </div>
   </div>
@@ -35,25 +41,39 @@ export default {
 .container {
   @include container;
   .content {
-    .title {
-      padding: 4rem 0 0 0;
-      font-size: 5rem;
-      font-weight: 700;
-      margin: 0 0 4rem 0;
-      @include custom(950) {
-        padding: 2rem 0 0 0;
-        font-size: 2rem;
-        margin: 0 0 2rem 0;
+    .top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 3rem;
+      .title {
+        padding: 4rem 0 0 0;
+        font-size: 5rem;
+        font-weight: 700;
+        margin: 0 0 4rem 0;
+        @include custom(950) {
+          padding: 2rem 0 0 0;
+          font-size: 2rem;
+          margin: 0 0 2rem 0;
+        }
+        @include custom(430) {
+          font-size: 1.8rem;
+        }
       }
-      @include custom(430) {
-        font-size: 1.8rem;
+      .img {
+        max-width: 50rem;
+        max-height: 50rem;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+        }
       }
     }
     .category {
       font-size: 2rem;
       font-weight: 400;
       line-height: 2rem;
-      margin: 0 0 4rem 0;
+      margin: 0 0 2rem 0;
       @include custom(950) {
         font-size: 1.5rem;
         margin: 0 0 2rem 0;
@@ -62,27 +82,28 @@ export default {
         font-size: 1rem;
       }
     }
-    .desc {
-      font-size: 2rem;
-      font-weight: 400;
-      line-height: 2rem;
-      margin: 0 0 4rem 0;
-      @include custom(950) {
-        font-size: 1.2rem;
-        margin: 0 0 2rem 0;
+    .bottom {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      .desc {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 2rem;
+        margin: 0 0 4rem 0;
+        @include custom(950) {
+          font-size: 1.2rem;
+          margin: 0 0 2rem 0;
+        }
       }
-    }
-    .img {
-      max-width: 50rem;
-      max-height: 50rem;
-      margin: 0 auto 4rem auto;
-      @include custom(950) {
-        margin-bottom: 2rem;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 0.5rem;
+      .manufacturer {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 2rem;
+        margin: 0 0 4rem 0;
+        @include custom(950) {
+          font-size: 1.2rem;
+          margin: 0 0 2rem 0;
+        }
       }
     }
   }

@@ -81,9 +81,10 @@ export default {
     .logo {
       cursor: pointer;
       position: relative;
+      right: 2rem;
       z-index: 5;
-      max-width: 5rem;
-      max-height: 5rem;
+      max-width: 10rem;
+      height: 5rem;
       img {
         width: 100%;
         height: 100%;

@@ -1,8 +1,17 @@
 <template>
   <div :class="$style.container">
     <div :class="$style.content">
-      <div :class="$style.title">{{ category.name }}</div>
-      <div :class="$style.desc">{{ category.description }}</div>
+      <video
+        src="/videos/main.mp4"
+        autoplay
+        muted
+        loop
+        :class="$style.video"
+      ></video>
+      <div :class="$style.top">
+        <div :class="$style.title">{{ category.name }}</div>
+        <div :class="$style.desc">{{ category.description }}</div>
+      </div>
       <div :class="$style.item" v-for="el in category.children" :key="el.name">
         <div :class="$style.subCategory">{{ el.name }}</div>
         <div :class="$style.cards">
@@ -50,6 +59,20 @@ export default {
 .container {
   @include container;
   .content {
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 35rem;
+      object-fit: cover;
+      z-index: 2;
+    }
+    .top {
+      position: relative;
+      z-index: 3;
+      margin-bottom: 15rem;
+    }
     .title {
       padding: 5rem 0 0 0;
       @include Title;

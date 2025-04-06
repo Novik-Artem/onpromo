@@ -2,57 +2,57 @@
   {
     "name": "company",
     "path": "/company",
-    "component": "D:\\\\onpromo\\\\pages\\\\company.vue",
+    "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\company.vue",
     "chunkName": "pages/company",
-    "_name": "_54d7ca16"
+    "_name": "_66cde9f9"
   },
   {
     "name": "contacts",
     "path": "/contacts",
-    "component": "D:\\\\onpromo\\\\pages\\\\contacts.vue",
+    "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\contacts.vue",
     "chunkName": "pages/contacts",
-    "_name": "_50ed69ea"
+    "_name": "_6d895c87"
   },
   {
     "name": "packages",
     "path": "/packages",
-    "component": "D:\\\\onpromo\\\\pages\\\\packages\\\\index.vue",
+    "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\packages\\\\index.vue",
     "chunkName": "pages/packages/index",
-    "_name": "_d0f6c386"
+    "_name": "_f2ddad7e"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\onpromo\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_78ee266c"
+    "_name": "_4f9aa664"
   },
   {
     "name": "equipment-categoryId",
     "path": "/equipment/:categoryId",
-    "component": "D:\\\\onpromo\\\\pages\\\\equipment\\\\_categoryId\\\\index.vue",
+    "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\equipment\\\\_categoryId\\\\index.vue",
     "chunkName": "pages/equipment/_categoryId/index",
-    "_name": "_15f13d00"
+    "_name": "_4a1c3104"
   },
   {
     "name": "projects-id",
     "path": "/projects/:id?",
-    "component": "D:\\\\onpromo\\\\pages\\\\projects\\\\_id.vue",
+    "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\projects\\\\_id.vue",
     "chunkName": "pages/projects/_id",
-    "_name": "_1af5f6f8"
+    "_name": "_1af172fc"
   },
   {
     "name": "services-id",
     "path": "/services/:id?",
-    "component": "D:\\\\onpromo\\\\pages\\\\services\\\\_id.vue",
+    "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\services\\\\_id.vue",
     "chunkName": "pages/services/_id",
-    "_name": "_3d289f94"
+    "_name": "_3d241b98"
   },
   {
     "name": "equipment-categoryId-id",
     "path": "/equipment/:categoryId?/:id",
-    "component": "D:\\\\onpromo\\\\pages\\\\equipment\\\\_categoryId\\\\_id.vue",
+    "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\equipment\\\\_categoryId\\\\_id.vue",
     "chunkName": "pages/equipment/_categoryId/_id",
-    "_name": "_32ab0130"
+    "_name": "_fb6ab728"
   }
 ]

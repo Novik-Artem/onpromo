@@ -1,10 +1,19 @@
 <template>
   <div :class="$style.container">
-    <div :class="$style.title">{{ project.name }}</div>
-    <div :class="$style.image">
-      <img :src="project.image" alt="" />
+    <video
+      src="/videos/main.mp4"
+      autoplay
+      muted
+      loop
+      :class="$style.video"
+    ></video>
+    <div :class="$style.content">
+      <div :class="$style.title">{{ project.name }}</div>
+      <!-- <div :class="$style.image">
+        <img :src="project.image" alt="" />
+      </div> -->
+      <div :class="$style.desc">{{ project.description }}</div>
     </div>
-    <div :class="$style.desc">{{ project.description }}</div>
   </div>
 </template>
 
@@ -24,26 +33,39 @@ export default {
 <style lang="scss" module>
 .container {
   @include container;
-  .title {
-    @include Title;
-    padding: 5rem 0;
-    text-align: center;
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+    z-index: 2;
   }
-  .image {
-    max-width: 50rem;
-    max-height: 50rem;
-    margin: 0 auto 3rem auto;
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 0.5rem;
+  .content {
+    position: relative;
+    z-index: 3;
+    .title {
+      @include Title;
+      padding: 8rem 0;
+      margin-bottom: 12rem;
     }
-  }
-  .desc {
-    font-size: 1.5rem;
-    line-height: 120%;
-    @include custom(500) {
-      font-size: 1.2rem;
+    .image {
+      max-width: 50rem;
+      max-height: 50rem;
+      margin: 0 auto 3rem auto;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+      }
+    }
+    .desc {
+      font-size: 1.5rem;
+      line-height: 120%;
+      @include custom(500) {
+        font-size: 1.2rem;
+      }
     }
   }
 }

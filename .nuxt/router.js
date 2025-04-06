@@ -4,14 +4,14 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _54d7ca16 = () => interopDefault(import('..\\pages\\company.vue' /* webpackChunkName: "pages/company" */))
-const _50ed69ea = () => interopDefault(import('..\\pages\\contacts.vue' /* webpackChunkName: "pages/contacts" */))
-const _d0f6c386 = () => interopDefault(import('..\\pages\\packages\\index.vue' /* webpackChunkName: "pages/packages/index" */))
-const _78ee266c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _15f13d00 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\index.vue' /* webpackChunkName: "pages/equipment/_categoryId/index" */))
-const _1af5f6f8 = () => interopDefault(import('..\\pages\\projects\\_id.vue' /* webpackChunkName: "pages/projects/_id" */))
-const _3d289f94 = () => interopDefault(import('..\\pages\\services\\_id.vue' /* webpackChunkName: "pages/services/_id" */))
-const _32ab0130 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\_id.vue' /* webpackChunkName: "pages/equipment/_categoryId/_id" */))
+const _66cde9f9 = () => interopDefault(import('..\\pages\\company.vue' /* webpackChunkName: "pages/company" */))
+const _6d895c87 = () => interopDefault(import('..\\pages\\contacts.vue' /* webpackChunkName: "pages/contacts" */))
+const _f2ddad7e = () => interopDefault(import('..\\pages\\packages\\index.vue' /* webpackChunkName: "pages/packages/index" */))
+const _4f9aa664 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _4a1c3104 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\index.vue' /* webpackChunkName: "pages/equipment/_categoryId/index" */))
+const _1af172fc = () => interopDefault(import('..\\pages\\projects\\_id.vue' /* webpackChunkName: "pages/projects/_id" */))
+const _3d241b98 = () => interopDefault(import('..\\pages\\services\\_id.vue' /* webpackChunkName: "pages/services/_id" */))
+const _fb6ab728 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\_id.vue' /* webpackChunkName: "pages/equipment/_categoryId/_id" */))
 
 const emptyFn = () => {}
 
@@ -26,35 +26,35 @@ export const routerOptions = {
 
   routes: [{
     path: "/company",
-    component: _54d7ca16,
+    component: _66cde9f9,
     name: "company"
   }, {
     path: "/contacts",
-    component: _50ed69ea,
+    component: _6d895c87,
     name: "contacts"
   }, {
     path: "/packages",
-    component: _d0f6c386,
+    component: _f2ddad7e,
     name: "packages"
   }, {
     path: "/",
-    component: _78ee266c,
+    component: _4f9aa664,
     name: "index"
   }, {
     path: "/equipment/:categoryId",
-    component: _15f13d00,
+    component: _4a1c3104,
     name: "equipment-categoryId"
   }, {
     path: "/projects/:id?",
-    component: _1af5f6f8,
+    component: _1af172fc,
     name: "projects-id"
   }, {
     path: "/services/:id?",
-    component: _3d289f94,
+    component: _3d241b98,
     name: "services-id"
   }, {
     path: "/equipment/:categoryId?/:id",
-    component: _32ab0130,
+    component: _fb6ab728,
     name: "equipment-categoryId-id"
   }],
 
