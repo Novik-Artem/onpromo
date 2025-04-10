@@ -42,9 +42,14 @@ export default {
     @include Title;
     text-transform: uppercase;
     margin: 0 0 4rem 0;
+
     @include custom(650) {
       margin: 0 0 2rem 0;
       padding: 2rem 0 0 0;
+      font-size: 3.2rem;
+    }
+    @include custom(480) {
+      font-size: 2.5rem;
     }
   }
   .grid {
@@ -82,35 +87,6 @@ export default {
           height: 100%;
         }
       }
-      // &:last-child {
-      //   cursor: default;
-      //   display: grid;
-      //   grid-template-columns: 1fr 1fr;
-      //   gap: 0.5rem;
-      //   @include custom(560) {
-      //     grid-template-columns: 1fr;
-      //   }
-      //   img {
-      //     width: 100%;
-      //     height: 100%;
-      //   }
-      //   .item {
-      //     cursor: pointer;
-      //     position: relative;
-      //     .text {
-      //       position: absolute;
-      //       bottom: 0;
-      //       left: 0;
-      //       width: 100%;
-      //       padding: 1.5rem 0;
-      //       background-color: #000000d6;
-      //       color: $white;
-      //       display: flex;
-      //       align-items: center;
-      //       justify-content: center;
-      //     }
-      //   }
-      // }
     }
   }
 }

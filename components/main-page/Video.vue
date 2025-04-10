@@ -43,6 +43,10 @@
       margin: 0 0 4rem 0;
       @include custom(650) {
         margin: 0 0 2rem 0;
+        font-size: 3.2rem;
+      }
+      @include custom(480) {
+        font-size: 2.5rem;
       }
     }
     .subtext {

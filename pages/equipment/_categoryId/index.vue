@@ -1,13 +1,17 @@
 <template>
   <div :class="$style.container">
-    <div :class="$style.content">
+    <div :class="$style.banner">
       <video
         src="/videos/main.mp4"
         autoplay
         muted
         loop
         :class="$style.video"
+        v-if="category.video_file"
       ></video>
+      <img v-else :src="category.banner" alt="" :class="$style.image" />
+    </div>
+    <div :class="$style.content">
       <div :class="$style.top">
         <div :class="$style.title">{{ category.name }}</div>
         <div :class="$style.desc">{{ category.description }}</div>
@@ -58,8 +62,9 @@ export default {
 <style lang="scss" module>
 .container {
   @include container;
-  .content {
-    .video {
+  .banner {
+    .video,
+    .image {
       position: absolute;
       top: 0;
       left: 0;
@@ -67,24 +72,42 @@ export default {
       height: 35rem;
       object-fit: cover;
       z-index: 2;
+      @include custom(750) {
+        height: 25rem;
+      }
     }
+  }
+  .content {
+    position: relative;
+    z-index: 3;
     .top {
       position: relative;
       z-index: 3;
       margin-bottom: 15rem;
+      @include custom(750) {
+        margin-bottom: 13rem;
+      }
     }
     .title {
       padding: 5rem 0 0 0;
       @include Title;
       max-width: 12rem;
       margin: 0 0 3rem 0;
-      @include custom(650) {
-        margin: 0 0 2rem 0;
+      @include custom(750) {
+        font-size: 2.8rem;
+        padding: 1rem 0 0 0;
+        margin: 0 0 1rem 0;
+      }
+      @include custom(400) {
+        font-size: 2.4rem;
       }
     }
     .desc {
       font-size: 2rem;
       margin: 0 0 4rem 0;
+      @include custom(750) {
+        font-size: 1.2rem;
+      }
     }
     .item {
       margin: 0 0 4rem 0;
