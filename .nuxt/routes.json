@@ -42,13 +42,6 @@
     "_name": "_1af172fc"
   },
   {
-    "name": "services-id",
-    "path": "/services/:id?",
-    "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\services\\\\_id.vue",
-    "chunkName": "pages/services/_id",
-    "_name": "_3d241b98"
-  },
-  {
     "name": "equipment-categoryId-id",
     "path": "/equipment/:categoryId?/:id",
     "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\equipment\\\\_categoryId\\\\_id.vue",

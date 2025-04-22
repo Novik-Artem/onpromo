@@ -13,7 +13,7 @@
         <div :class="$style.column">
           <div :class="$style.title">Услуги</div>
           <div :class="$style.item" v-for="item in services" :key="item.id">
-            <nuxt-link :to="'/services/' + item.id" :class="$style.link">
+            <nuxt-link to="/#services" :class="$style.link">
               {{ item.name }}
             </nuxt-link>
           </div>

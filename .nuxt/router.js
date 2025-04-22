@@ -10,7 +10,6 @@ const _f2ddad7e = () => interopDefault(import('..\\pages\\packages\\index.vue' /
 const _4f9aa664 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 const _4a1c3104 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\index.vue' /* webpackChunkName: "pages/equipment/_categoryId/index" */))
 const _1af172fc = () => interopDefault(import('..\\pages\\projects\\_id.vue' /* webpackChunkName: "pages/projects/_id" */))
-const _3d241b98 = () => interopDefault(import('..\\pages\\services\\_id.vue' /* webpackChunkName: "pages/services/_id" */))
 const _fb6ab728 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\_id.vue' /* webpackChunkName: "pages/equipment/_categoryId/_id" */))
 
 const emptyFn = () => {}
@@ -48,10 +47,6 @@ export const routerOptions = {
     path: "/projects/:id?",
     component: _1af172fc,
     name: "projects-id"
-  }, {
-    path: "/services/:id?",
-    component: _3d241b98,
-    name: "services-id"
   }, {
     path: "/equipment/:categoryId?/:id",
     component: _fb6ab728,

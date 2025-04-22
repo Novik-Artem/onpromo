@@ -46,12 +46,12 @@
         font-size: 3.2rem;
       }
       @include custom(480) {
-        font-size: 2.5rem;
+        font-size: 2.375rem;
       }
     }
     .subtext {
       text-transform: uppercase;
-      font-size: 1.375rem;
+      font-size: 1.125rem;
       font-weight: 400;
       max-width: 35rem;
       line-height: 2rem;

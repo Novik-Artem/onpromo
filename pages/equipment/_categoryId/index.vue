@@ -2,7 +2,7 @@
   <div :class="$style.container">
     <div :class="$style.banner">
       <video
-        src="/videos/main.mp4"
+        :src="category.video_file"
         autoplay
         muted
         loop
@@ -40,10 +40,11 @@
 export default {
   async mounted() {
     await this.$store.dispatch('equipment/getEquipment')
-    this.$store.commit(
-      'equipment/setCategory',
-      this.$store.state.equipment.equipment[this.$route.params.categoryId - 1]
+    console.log(this.$store.state.equipment.equipment)
+    const equipment = this.$store.state.equipment.equipment.find(
+      (i) => i.id == this.$route.params.categoryId
     )
+    this.$store.commit('equipment/setCategory', equipment)
   },
   computed: {
     category() {
@@ -69,7 +70,7 @@ export default {
       top: 0;
       left: 0;
       width: 100%;
-      height: 35rem;
+      height: 33.125rem;
       object-fit: cover;
       z-index: 2;
       @include custom(750) {
@@ -89,13 +90,12 @@ export default {
       }
     }
     .title {
-      padding: 5rem 0 0 0;
-      @include Title;
+      @include BigTitle;
       max-width: 12rem;
       margin: 0 0 3rem 0;
+      padding-top: 8.5rem;
       @include custom(750) {
         font-size: 2.8rem;
-        padding: 1rem 0 0 0;
         margin: 0 0 1rem 0;
       }
       @include custom(400) {
@@ -103,17 +103,18 @@ export default {
       }
     }
     .desc {
-      font-size: 2rem;
+      text-transform: uppercase;
       margin: 0 0 4rem 0;
-      @include custom(750) {
-        font-size: 1.2rem;
-      }
     }
     .item {
       margin: 0 0 4rem 0;
       .subCategory {
         margin: 0 0 2rem 0;
-        font-size: 1.2rem;
+        font-size: 3rem;
+        font-weight: 700;
+        @include custom(660) {
+          font-size: 1.75rem;
+        }
       }
       .cards {
         display: grid;
@@ -128,9 +129,6 @@ export default {
         @include custom(660) {
           grid-template-columns: 1fr 1fr;
         }
-        @include custom(460) {
-          grid-template-columns: 1fr;
-        }
         .card {
           position: relative;
           cursor: pointer;
@@ -141,16 +139,19 @@ export default {
           }
           .name {
             position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
+            top: 30%;
             left: 1rem;
-            font-size: 1.3rem;
+            font-weight: 700;
+            font-size: 1.375rem;
+            line-height: 120%;
           }
           .image {
+            height: 160px;
             img {
               border-radius: 0.5rem;
               width: 100%;
               height: 100%;
+              object-fit: cover;
             }
           }
         }

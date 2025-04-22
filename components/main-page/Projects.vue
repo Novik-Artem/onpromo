@@ -41,15 +41,13 @@ export default {
     padding: 4rem 0 0 0;
     @include Title;
     text-transform: uppercase;
-    margin: 0 0 4rem 0;
-
+    margin: 0 0 2rem 0;
     @include custom(650) {
-      margin: 0 0 2rem 0;
       padding: 2rem 0 0 0;
       font-size: 3.2rem;
     }
     @include custom(480) {
-      font-size: 2.5rem;
+      font-size: 2.375rem;
     }
   }
   .grid {

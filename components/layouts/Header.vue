@@ -1,9 +1,13 @@
 <template>
   <header :class="$style.header">
     <div :class="$style.container">
-      <div :class="$style.logo" @click="$router.push('/')">
-        <img src="/images/logo.jpg" alt="" />
-      </div>
+      <img
+        src="/images/logo.jpg"
+        alt=""
+        :class="$style.logo"
+        @click="$router.push('/')"
+      />
+
       <div :class="$style.burger" @click="openBurger">
         <img src="/icons/burger.svg" alt="" v-if="!isBurgerOpen" />
         <img src="/icons/cross-white.svg" alt="" :class="$style.cross" v-else />
@@ -29,12 +33,12 @@ export default {
           link: '/' + '#projects',
         },
         {
-          text: 'Услуги',
-          link: '/' + '#services',
-        },
-        {
           text: 'Оборудование',
           link: '/' + '#equipment',
+        },
+        {
+          text: 'Услуги',
+          link: '/' + '#services',
         },
         {
           text: 'О компании',
@@ -72,6 +76,8 @@ export default {
   z-index: 10;
   background-color: $black;
   color: $white;
+  height: 5rem;
+  padding: 0.5rem 0;
   .container {
     @include container;
     display: flex;
@@ -81,14 +87,10 @@ export default {
     .logo {
       cursor: pointer;
       position: relative;
-      right: 2rem;
+      right: 1.7rem;
       z-index: 5;
-      max-width: 10rem;
-      height: 5rem;
-      img {
-        width: 100%;
-        height: 100%;
-      }
+      width: 7rem;
+      height: 4rem;
     }
     .menu {
       display: flex;

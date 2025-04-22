@@ -1,9 +1,9 @@
+export { default as LayoutsFooter } from '../..\\components\\layouts\\Footer.vue'
+export { default as LayoutsHeader } from '../..\\components\\layouts\\Header.vue'
 export { default as MainPageEquipment } from '../..\\components\\main-page\\Equipment.vue'
 export { default as MainPageProjects } from '../..\\components\\main-page\\Projects.vue'
 export { default as MainPageServices } from '../..\\components\\main-page\\Services.vue'
 export { default as MainPageVideo } from '../..\\components\\main-page\\Video.vue'
-export { default as LayoutsFooter } from '../..\\components\\layouts\\Footer.vue'
-export { default as LayoutsHeader } from '../..\\components\\layouts\\Header.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

@@ -2,6 +2,13 @@
   font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
+  font-size: 4rem;
+  font-style: normal;
+}
+@mixin BigTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-size: 4.625rem;
   font-style: normal;
 }

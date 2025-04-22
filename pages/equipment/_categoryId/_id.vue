@@ -51,15 +51,15 @@ export default {
   @include container;
   .content {
     .top {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 3rem;
       gap: 1rem;
+      padding: 2rem 0 0 0;
       @include custom(500) {
-        grid-template-columns: 1fr;
+        flex-direction: column;
       }
       .title {
-        padding: 4rem 0 0 0;
         font-size: 5rem;
         font-weight: 700;
         margin: 0 0 4rem 0;
@@ -73,9 +73,10 @@ export default {
         }
       }
       .img {
-        max-width: 50rem;
-        max-height: 50rem;
+        width: 22.5rem;
+        height: 22.5rem;
         img {
+          object-fit: cover;
           width: 100%;
           height: 100%;
           border-radius: 0.5rem;
@@ -83,9 +84,9 @@ export default {
       }
     }
     .category {
-      font-size: 2rem;
+      font-size: 1.375rem;
       font-weight: 400;
-      line-height: 1.5rem;
+      line-height: 120%;
       margin: 0 0 2rem 0;
       @include custom(950) {
         font-size: 1.5rem;
@@ -103,21 +104,21 @@ export default {
         grid-template-columns: 1fr;
       }
       .desc {
-        font-size: 2rem;
         font-weight: 400;
-        line-height: 1.5rem;
+        line-height: 150%;
         margin: 0 0 4rem 0;
         @include custom(950) {
-          font-size: 1.2rem;
           margin: 0 0 2rem 0;
         }
       }
       .manufacturer {
-        font-size: 2rem;
+        border-left: 1px solid white;
+        padding-left: 1rem;
         font-weight: 400;
         margin: 0 0 4rem 0;
         span {
           display: block;
+          font-size: 1.375rem;
           margin: 0 0 2rem 0;
           @include custom(550) {
             margin: 0 1rem 0 0;
@@ -132,7 +133,7 @@ export default {
     }
     .gallery {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       gap: 1rem;
       @include custom(850) {
         grid-template-columns: 1fr 1fr;
@@ -141,10 +142,9 @@ export default {
         grid-template-columns: 1fr;
       }
       .item {
-        max-width: 40rem;
-        max-height: 40rem;
-        object-fit: cover;
+        min-height: 13.75rem;
         img {
+          object-fit: cover;
           width: 100%;
           height: 100%;
         }

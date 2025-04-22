@@ -2,12 +2,7 @@
   <div :class="$style.content" id="services">
     <div :class="$style.title">Услуги</div>
     <div :class="$style.services">
-      <div
-        :class="$style.item"
-        v-for="item in services"
-        :key="item.id"
-        @click="open(item.id, item)"
-      >
+      <div :class="$style.item" v-for="item in services" :key="item.id">
         <div :class="$style.image">
           <img :src="item.image" alt="" />
         </div>
@@ -19,7 +14,6 @@
           <div :class="$style.subtext">
             {{ item.description }}
           </div>
-          <div :class="$style.link">подробнее</div>
         </div>
       </div>
     </div>
@@ -33,12 +27,6 @@ export default {
       return this.$store.state.services.services
     },
   },
-  methods: {
-    open(id, item) {
-      this.$store.commit('services/setService', item)
-      this.$router.push(`/services/${id}`)
-    },
-  },
 }
 </script>
 
@@ -48,14 +36,13 @@ export default {
     padding: 4rem 0 0 0;
     @include Title;
     text-transform: uppercase;
-    margin: 0 0 4rem 0;
+    margin: 0 0 2rem 0;
     @include custom(650) {
-      margin: 0 0 2rem 0;
       padding: 2rem 0 0 0;
       font-size: 3.2rem;
     }
     @include custom(480) {
-      font-size: 2.5rem;
+      font-size: 2.375rem;
     }
   }
   .services {
@@ -69,7 +56,6 @@ export default {
       grid-template-columns: 1fr;
     }
     .item {
-      cursor: pointer;
       position: relative;
       .desc {
         position: absolute;
@@ -131,7 +117,7 @@ export default {
         }
       }
       .image {
-        height: 15rem;
+        height: 23.125rem;
         width: 100%;
         img {
           border-radius: 0.5rem;

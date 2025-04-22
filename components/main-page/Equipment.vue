@@ -43,17 +43,16 @@ export default {
   padding: 4rem 0 0 0;
   @include Title;
   text-transform: uppercase;
-  margin: 0 0 4rem 0;
+  margin: 0 0 2rem 0;
   @include custom(650) {
-    margin: 0 0 2rem 0;
     padding: 2rem 0 0 0;
   }
   &.long {
     @include custom(730) {
       font-size: 3.2rem;
     }
-    @include custom(520) {
-      font-size: 2rem;
+    @include custom(480) {
+      font-size: 2.375rem;
     }
   }
 }
@@ -93,6 +92,9 @@ export default {
       @include custom(1024) {
         display: none;
       }
+      .subtitle {
+        font-size: 1.5rem;
+      }
     }
     &:hover {
       .desc {
@@ -103,10 +105,9 @@ export default {
     }
     .text {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 40%;
       left: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       max-width: 12rem;
       font-weight: 500;
       display: -webkit-box;
@@ -118,7 +119,7 @@ export default {
       line-height: 1;
     }
     .image {
-      height: 10rem;
+      height: 13.75rem;
       width: 100%;
       img {
         border-radius: 0.5rem;

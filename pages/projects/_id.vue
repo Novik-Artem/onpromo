@@ -2,7 +2,7 @@
   <div :class="$style.container">
     <div :class="$style.banner">
       <video
-        src="/videos/main.mp4"
+        :src="project.video_file"
         autoplay
         muted
         loop
@@ -50,7 +50,7 @@ export default {
       top: 0;
       left: 0;
       width: 100%;
-      height: 35rem;
+      height: 33.125rem;
       object-fit: cover;
       z-index: 2;
       @include custom(750) {
@@ -62,36 +62,25 @@ export default {
     position: relative;
     z-index: 3;
     .title {
-      @include Title;
-      padding: 10rem 0 0 0;
-      margin: 0 0 18rem 0;
+      @include BigTitle;
+      padding-top: 8.5rem;
       @include custom(750) {
-        padding: 7rem 0 0 0;
         font-size: 3.2rem;
-        margin: 0 0 13rem 0;
       }
       @include custom(500) {
         max-width: 25rem;
-        padding: 6rem 0 0 0;
-        margin: 0 0 10rem 0;
-      }
-    }
-    .image {
-      max-width: 50rem;
-      max-height: 50rem;
-      margin: 0 auto 3rem auto;
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 0.5rem;
+        padding-top: 6rem;
       }
     }
     .desc {
-      font-size: 1.5rem;
-      line-height: 120%;
+      padding-top: 18rem;
+      line-height: 140%;
       margin: 0 0 3rem 0;
+      @include custom(750) {
+        padding-top: 11rem;
+      }
       @include custom(500) {
-        font-size: 1.2rem;
+        padding-top: 13rem;
       }
     }
 
@@ -106,12 +95,12 @@ export default {
         grid-template-columns: 1fr;
       }
       .item {
-        max-width: 40rem;
-        max-height: 40rem;
-        object-fit: cover;
+        height: 12.5rem;
+
         img {
           width: 100%;
           height: 100%;
+          object-fit: cover;
         }
       }
     }

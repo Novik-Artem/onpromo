@@ -35,14 +35,12 @@
       }
     }
     .subtext {
-      font-size: 1.375rem;
       font-weight: 400;
       max-width: 50rem;
-      line-height: 2rem;
+      line-height: 140%;
       margin: 0 0 3rem 0;
       @include custom(650) {
         margin: 0 0 2rem 0;
-        font-size: 1.2rem;
       }
     }
     .icon {
