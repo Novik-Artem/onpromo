@@ -12,9 +12,7 @@
           <div :class="$style.category">
             Категория: {{ equipment.category?.name }}
           </div>
-          <div :class="$style.desc">
-            {{ equipment.description }}
-          </div>
+          <div :class="$style.desc" v-html="equipment.description"></div>
         </div>
         <div :class="$style.manufacturer" v-if="equipment.manufacturer">
           <span>Производитель</span> {{ equipment.manufacturer }}

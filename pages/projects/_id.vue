@@ -13,7 +13,7 @@
     </div>
     <div :class="$style.content">
       <div :class="$style.title">{{ project.name }}</div>
-      <div :class="$style.desc">{{ project.description }}</div>
+      <div :class="$style.desc" v-html="project.description"></div>
       <div :class="$style.gallery">
         <div
           v-for="item in project.images"

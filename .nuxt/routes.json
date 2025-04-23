@@ -3,49 +3,42 @@
     "name": "company",
     "path": "/company",
     "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\company.vue",
-    "chunkName": "pages/company",
-    "_name": "_66cde9f9"
+    "chunkName": "pages/company"
   },
   {
     "name": "contacts",
     "path": "/contacts",
     "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\contacts.vue",
-    "chunkName": "pages/contacts",
-    "_name": "_6d895c87"
+    "chunkName": "pages/contacts"
   },
   {
     "name": "packages",
     "path": "/packages",
     "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\packages\\\\index.vue",
-    "chunkName": "pages/packages/index",
-    "_name": "_f2ddad7e"
+    "chunkName": "pages/packages/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_4f9aa664"
+    "chunkName": "pages/index"
   },
   {
     "name": "equipment-categoryId",
     "path": "/equipment/:categoryId",
     "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\equipment\\\\_categoryId\\\\index.vue",
-    "chunkName": "pages/equipment/_categoryId/index",
-    "_name": "_4a1c3104"
+    "chunkName": "pages/equipment/_categoryId/index"
   },
   {
     "name": "projects-id",
     "path": "/projects/:id?",
     "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\projects\\\\_id.vue",
-    "chunkName": "pages/projects/_id",
-    "_name": "_1af172fc"
+    "chunkName": "pages/projects/_id"
   },
   {
     "name": "equipment-categoryId-id",
     "path": "/equipment/:categoryId?/:id",
     "component": "C:\\\\Users\\\\Artem\\\\Desktop\\\\Новая папка\\\\onpromo\\\\pages\\\\equipment\\\\_categoryId\\\\_id.vue",
-    "chunkName": "pages/equipment/_categoryId/_id",
-    "_name": "_fb6ab728"
+    "chunkName": "pages/equipment/_categoryId/_id"
   }
 ]
