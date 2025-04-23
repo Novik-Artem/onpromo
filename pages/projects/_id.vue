@@ -23,6 +23,21 @@
           <img :src="item.image" alt="" />
         </div>
       </div>
+      <div :class="$style.videos" v-if="project.videos">
+        <div
+          v-for="item in project.videos"
+          :key="item.video_file"
+          :class="$style.item"
+        >
+          <video
+            :src="item.video_file"
+            autoplay
+            muted
+            loop
+            :class="$style.video"
+          ></video>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -62,25 +77,25 @@ export default {
     position: relative;
     z-index: 3;
     .title {
+      max-width: 45rem;
+      position: absolute;
+      top: 8.5rem;
       @include BigTitle;
-      padding-top: 8.5rem;
       @include custom(750) {
         font-size: 3.2rem;
+        top: 6rem;
       }
       @include custom(500) {
+        top: 4rem;
         max-width: 25rem;
-        padding-top: 6rem;
       }
     }
     .desc {
-      padding-top: 18rem;
+      padding-top: 31rem;
       line-height: 140%;
       margin: 0 0 3rem 0;
       @include custom(750) {
-        padding-top: 11rem;
-      }
-      @include custom(500) {
-        padding-top: 13rem;
+        padding-top: 22.8rem;
       }
     }
 
@@ -88,6 +103,7 @@ export default {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1rem;
+      margin: 0 0 3rem 0;
       @include custom(850) {
         grid-template-columns: 1fr 1fr;
       }
@@ -98,6 +114,22 @@ export default {
         height: 12.5rem;
 
         img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .videos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      @include custom(760) {
+        grid-template-columns: 1fr;
+      }
+      .item {
+        height: 20rem;
+        video {
           width: 100%;
           height: 100%;
           object-fit: cover;

@@ -29,6 +29,21 @@
           <img :src="item.image" alt="" />
         </div>
       </div>
+      <div :class="$style.videos" v-if="equipment.videos">
+        <div
+          v-for="item in equipment.videos"
+          :key="item.video_file"
+          :class="$style.item"
+        >
+          <video
+            :src="item.video_file"
+            autoplay
+            muted
+            loop
+            :class="$style.video"
+          ></video>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -37,6 +52,7 @@
 export default {
   async mounted() {
     await this.$store.dispatch('equipment/getItem', this.$route.params.id)
+    console.log(this.equipment)
   },
   computed: {
     equipment() {
@@ -147,6 +163,22 @@ export default {
           object-fit: cover;
           width: 100%;
           height: 100%;
+        }
+      }
+    }
+    .videos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      @include custom(760) {
+        grid-template-columns: 1fr;
+      }
+      .item {
+        height: 20rem;
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
     }

@@ -87,6 +87,7 @@ export default {
           font-weight: 700;
         }
         .item {
+          line-height: 120%;
           margin: 0 0 1rem 0;
           &:last-child {
             margin: 0;
