@@ -147,7 +147,7 @@ export default {
     }
     .gallery {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 1rem;
       @include custom(850) {
         grid-template-columns: 1fr 1fr;
@@ -156,7 +156,7 @@ export default {
         grid-template-columns: 1fr;
       }
       .item {
-        min-height: 13.75rem;
+        min-height: 18rem;
         img {
           object-fit: cover;
           width: 100%;
@@ -166,13 +166,19 @@ export default {
     }
     .videos {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 1rem;
-      @include custom(760) {
-        grid-template-columns: 1fr;
-      }
+      // @include custom(760) {
+      //   grid-template-columns: 1fr;
+      // }
       .item {
-        height: 20rem;
+        height: 30rem;
+        max-width: 70rem;
+        margin: 0 auto;
+        @include custom(630) {
+          height: 18rem;
+          max-width: 50rem;
+        }
         video {
           width: 100%;
           height: 100%;

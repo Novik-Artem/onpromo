@@ -1,6 +1,7 @@
 <template>
   <div :class="$style.container">
     <div :class="$style.banner">
+      <div :class="$style.bg"></div>
       <video
         :src="category.video_file"
         autoplay
@@ -70,6 +71,16 @@ export default {
 .container {
   @include container;
   .banner {
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      z-index: 3;
+      opacity: 30%;
+    }
     .video,
     .image {
       position: absolute;
@@ -109,9 +120,9 @@ export default {
       margin: 0 0 4rem 0;
     }
     .items {
-      padding-top: 40rem;
+      padding-top: 32rem;
       @include custom(750) {
-        padding-top: 30rem;
+        padding-top: 22rem;
       }
       .item {
         margin: 0 0 4rem 0;
@@ -125,7 +136,7 @@ export default {
         }
         .cards {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
           gap: 0.5rem;
           @include custom(1000) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -148,12 +159,24 @@ export default {
               position: absolute;
               top: 30%;
               left: 1rem;
+              z-index: 3;
               font-weight: 700;
               font-size: 1.375rem;
               line-height: 120%;
             }
             .image {
-              height: 160px;
+              height: 200px;
+              position: relative;
+              &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $black;
+                opacity: 30%;
+              }
               img {
                 border-radius: 0.5rem;
                 width: 100%;

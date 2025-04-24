@@ -1,6 +1,7 @@
 <template>
   <div :class="$style.container">
     <div :class="$style.banner">
+      <div :class="$style.bg"></div>
       <video
         :src="project.video_file"
         autoplay
@@ -59,6 +60,16 @@ export default {
 .container {
   @include container;
   .banner {
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      z-index: 3;
+      opacity: 30%;
+    }
     .video,
     .image {
       position: absolute;

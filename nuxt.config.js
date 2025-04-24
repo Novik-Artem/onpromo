@@ -68,7 +68,7 @@ export default {
     '@nuxtjs/axios',
   ],
   axios: {
-    baseURL: 'http://45.139.78.70/api/'
+    baseURL: 'https://onpromo.by/api/'
   },
   build: {},
 }

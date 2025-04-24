@@ -117,8 +117,19 @@ export default {
         }
       }
       .image {
-        height: 23.125rem;
+        height: 18rem;
         width: 100%;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $black;
+          opacity: 30%;
+        }
         img {
           border-radius: 0.5rem;
           width: 100%;

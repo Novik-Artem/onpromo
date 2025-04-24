@@ -119,8 +119,19 @@ export default {
       line-height: 1;
     }
     .image {
+      position: relative;
       height: 13.75rem;
       width: 100%;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 30%;
+      }
       img {
         border-radius: 0.5rem;
         width: 100%;
