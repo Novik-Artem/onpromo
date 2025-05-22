@@ -96,9 +96,12 @@ export default {
         font-size: 3.2rem;
         top: 6rem;
       }
+      @include custom(640) {
+        font-size: 3rem;
+      }
       @include custom(500) {
-        top: 4rem;
         max-width: 25rem;
+        font-size: 2.3rem;
       }
     }
     .desc {

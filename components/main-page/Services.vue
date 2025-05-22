@@ -2,7 +2,12 @@
   <div :class="$style.content" id="services">
     <div :class="$style.title">Услуги</div>
     <div :class="$style.services">
-      <div :class="$style.item" v-for="item in services" :key="item.id">
+      <div
+        :class="[$style.item, { [$style.active]: activeDesc === item.id }]"
+        v-for="item in services"
+        :key="item.id"
+        @click="activeDesc = item.id"
+      >
         <div :class="$style.image">
           <img :src="item.image" alt="" />
         </div>
@@ -22,6 +27,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      activeDesc: '',
+    }
+  },
   computed: {
     services() {
       return this.$store.state.services.services
@@ -32,6 +42,10 @@ export default {
 
 <style lang="scss" module>
 .content {
+  padding-top: 3rem;
+  @include custom(650) {
+    padding-top: 5rem;
+  }
   .title {
     padding: 4rem 0 0 0;
     @include Title;
@@ -57,6 +71,12 @@ export default {
     }
     .item {
       position: relative;
+      &.active {
+        .desc {
+          height: 100%;
+          z-index: 2;
+        }
+      }
       .desc {
         position: absolute;
         width: 100%;

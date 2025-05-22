@@ -63,12 +63,11 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/svg',
   ],
-
   modules: [
     '@nuxtjs/axios',
   ],
   axios: {
-    baseURL: 'https://onpromo.by/api/'
+    baseURL: 'http://dev-314.ru/api/'
   },
   build: {},
 }

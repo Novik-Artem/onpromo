@@ -19,6 +19,7 @@
       src="/videos/main.mp4"
       autoplay
       muted
+      playsinline
       loop
       :class="$style.video"
     ></video>

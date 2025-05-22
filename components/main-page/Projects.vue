@@ -1,10 +1,12 @@
 <template>
-  <div :class="$style.content" id="projects">
-    <div :class="$style.title">Проекты</div>
+  <div :class="$style.content">
+    <div :class="$style.title" @click="$router.push('/projects')">
+      <span>Проекты</span>
+    </div>
     <div :class="$style.grid">
       <div
         :class="$style.column"
-        v-for="item in projects"
+        v-for="item in projects.slice(0, 4)"
         :key="item.id"
         @click="open(item.id, item)"
       >
@@ -37,11 +39,34 @@ export default {
 
 <style lang="scss" module>
 .content {
+  padding-top: 3rem;
+  @include custom(650) {
+    padding-top: 5rem;
+  }
   .title {
     padding: 4rem 0 0 0;
     @include Title;
     text-transform: uppercase;
     margin: 0 0 2rem 0;
+    span {
+      cursor: pointer;
+      position: relative;
+      &:hover {
+        &::after {
+          opacity: 1;
+          right: -3.5rem;
+        }
+      }
+      &::after {
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        content: '>';
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 0;
+      }
+    }
     @include custom(650) {
       padding: 2rem 0 0 0;
       font-size: 3.2rem;

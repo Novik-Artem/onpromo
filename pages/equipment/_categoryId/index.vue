@@ -61,7 +61,6 @@ export default {
     open(id, item) {
       this.$store.commit('equipment/setItem', item)
       this.$router.push(`/equipment/${this.$route.params.categoryId}/${id}`)
-      console.log(item)
     },
   },
 }
@@ -100,10 +99,27 @@ export default {
     z-index: 3;
     .top {
       position: absolute;
-      top: 8.5rem;
+      top: 6rem;
       z-index: 3;
     }
     .title {
+      text-transform: uppercase;
+      max-width: 45rem;
+      @include BigTitle;
+      margin: 0 0 3rem 0;
+      @include custom(750) {
+        font-size: 3.2rem;
+        margin: 0 0 1rem 0;
+      }
+      @include custom(640) {
+        font-size: 3rem;
+      }
+      @include custom(500) {
+        max-width: 25rem;
+        font-size: 2.3rem;
+      }
+    }
+    /*.title {
       @include BigTitle;
       max-width: 12rem;
       margin: 0 0 3rem 0;
@@ -114,7 +130,7 @@ export default {
       @include custom(400) {
         font-size: 2.4rem;
       }
-    }
+    }*/
     .desc {
       text-transform: uppercase;
       margin: 0 0 4rem 0;

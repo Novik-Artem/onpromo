@@ -35,7 +35,6 @@ export default {
         window.location.hash = ''
       }, 500)
       //this.$route.fullPath.split('#')[0]
-      console.log(this.route)
     },
   },
 }

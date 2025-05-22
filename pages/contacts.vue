@@ -4,7 +4,7 @@
       <div :class="$style.title">Контакты</div>
       <div :class="$style.subtext">Всегда на связи</div>
       <a href="mailto:onpromoby@gmail.com">onpromoby@gmail.com</a>
-      <a href="tel:+375336434035">+375336434035</a>
+      <a href="tel:+37533643435"> +375 (33) 643-40-35</a>
       <a
         href="https://www.instagram.com/onpromo.by/"
         target="__blank"

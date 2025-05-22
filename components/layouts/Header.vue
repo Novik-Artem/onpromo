@@ -14,9 +14,9 @@
       </div>
       <div :class="[$style.menu, { [$style.open]: isBurgerOpen }]">
         <div v-for="item in links" :key="item.text">
-          <nuxt-link :to="item.link">
+          <div @click="$router.push(item.link)">
             <div @click="closeBurger" :class="$style.link">{{ item.text }}</div>
-          </nuxt-link>
+          </div>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@ export default {
       links: [
         {
           text: 'Проекты',
-          link: '/' + '#projects',
+          link: '/projects',
         },
         {
           text: 'Оборудование',

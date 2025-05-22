@@ -4,13 +4,14 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _66cde9f9 = () => interopDefault(import('..\\pages\\company.vue' /* webpackChunkName: "pages/company" */))
-const _6d895c87 = () => interopDefault(import('..\\pages\\contacts.vue' /* webpackChunkName: "pages/contacts" */))
-const _f2ddad7e = () => interopDefault(import('..\\pages\\packages\\index.vue' /* webpackChunkName: "pages/packages/index" */))
-const _4f9aa664 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _4a1c3104 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\index.vue' /* webpackChunkName: "pages/equipment/_categoryId/index" */))
-const _1af172fc = () => interopDefault(import('..\\pages\\projects\\_id.vue' /* webpackChunkName: "pages/projects/_id" */))
-const _fb6ab728 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\_id.vue' /* webpackChunkName: "pages/equipment/_categoryId/_id" */))
+const _54d7ca16 = () => interopDefault(import('..\\pages\\company.vue' /* webpackChunkName: "pages/company" */))
+const _50ed69ea = () => interopDefault(import('..\\pages\\contacts.vue' /* webpackChunkName: "pages/contacts" */))
+const _d0f6c386 = () => interopDefault(import('..\\pages\\packages\\index.vue' /* webpackChunkName: "pages/packages/index" */))
+const _653d1090 = () => interopDefault(import('..\\pages\\projects\\index.vue' /* webpackChunkName: "pages/projects/index" */))
+const _78ee266c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _15f13d00 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\index.vue' /* webpackChunkName: "pages/equipment/_categoryId/index" */))
+const _1af5f6f8 = () => interopDefault(import('..\\pages\\projects\\_id.vue' /* webpackChunkName: "pages/projects/_id" */))
+const _32ab0130 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\_id.vue' /* webpackChunkName: "pages/equipment/_categoryId/_id" */))
 
 const emptyFn = () => {}
 
@@ -25,31 +26,35 @@ export const routerOptions = {
 
   routes: [{
     path: "/company",
-    component: _66cde9f9,
+    component: _54d7ca16,
     name: "company"
   }, {
     path: "/contacts",
-    component: _6d895c87,
+    component: _50ed69ea,
     name: "contacts"
   }, {
     path: "/packages",
-    component: _f2ddad7e,
+    component: _d0f6c386,
     name: "packages"
   }, {
+    path: "/projects",
+    component: _653d1090,
+    name: "projects"
+  }, {
     path: "/",
-    component: _4f9aa664,
+    component: _78ee266c,
     name: "index"
   }, {
     path: "/equipment/:categoryId",
-    component: _4a1c3104,
+    component: _15f13d00,
     name: "equipment-categoryId"
   }, {
-    path: "/projects/:id?",
-    component: _1af172fc,
+    path: "/projects/:id",
+    component: _1af5f6f8,
     name: "projects-id"
   }, {
     path: "/equipment/:categoryId?/:id",
-    component: _fb6ab728,
+    component: _32ab0130,
     name: "equipment-categoryId-id"
   }],
 

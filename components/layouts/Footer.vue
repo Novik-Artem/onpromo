@@ -1,9 +1,11 @@
 <template>
-  <footer :class="$style.header">
+  <footer :class="$style.footer">
     <div :class="$style.container">
       <div :class="$style.menu">
         <div :class="$style.column">
-          <div :class="$style.title">Проекты</div>
+          <div :class="$style.title">
+            <span @click="$router.push('/projects')">Проекты</span>
+          </div>
           <div :class="$style.item" v-for="item in projects" :key="item.id">
             <nuxt-link :to="'/projects/' + item.id" :class="$style.link">
               {{ item.name }}
@@ -37,6 +39,10 @@
               <img src="/icons/inst.svg" alt="" />
             </a>
           </div>
+          <div>
+            <a href="mailto:onpromoby@gmail.com">onpromoby@gmail.com</a>
+          </div>
+          <a href="tel:+37533643435"> +375 (33) 643-40-35</a>
         </div>
       </div>
     </div>
@@ -60,7 +66,9 @@ export default {
 </script>
 
 <style lang="scss" module>
-.header {
+.footer {
+  position: relative;
+  z-index: 4;
   padding: 4rem 0;
   background-color: $black;
   color: $white;
@@ -82,9 +90,21 @@ export default {
         gap: 2rem;
       }
       .column {
+        a {
+          transition: all 0.3s ease-in-out;
+          color: $white;
+          &:hover {
+            font-weight: 700;
+          }
+          display: block;
+          margin: 0 0 1rem 0;
+        }
         .title {
           margin: 0 0 2rem 0;
           font-weight: 700;
+          span {
+            cursor: pointer;
+          }
         }
         .item {
           line-height: 120%;
