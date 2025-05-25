@@ -26,6 +26,7 @@ aside {
 }
 html,
 body {
+  scroll-behavior: auto; // for safari
   font-family: 'Montserrat';
   height: 100%;
   width: 100%;

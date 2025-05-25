@@ -2,12 +2,7 @@
   <div :class="$style.content" id="services">
     <div :class="$style.title">Услуги</div>
     <div :class="$style.services">
-      <div
-        :class="[$style.item, { [$style.active]: activeDesc === item.id }]"
-        v-for="item in services"
-        :key="item.id"
-        @click="activeDesc = item.id"
-      >
+      <div :class="$style.item" v-for="item in services" :key="item.id">
         <div :class="$style.image">
           <img :src="item.image" alt="" />
         </div>
@@ -27,11 +22,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      activeDesc: '',
-    }
-  },
   computed: {
     services() {
       return this.$store.state.services.services
@@ -71,7 +61,13 @@ export default {
     }
     .item {
       position: relative;
-      &.active {
+      &:hover {
+        .desc {
+          height: 100%;
+          z-index: 2;
+        }
+      }
+      &:active {
         .desc {
           height: 100%;
           z-index: 2;
@@ -103,12 +99,6 @@ export default {
         }
         .link {
           cursor: pointer;
-        }
-      }
-      &:hover {
-        .desc {
-          height: 100%;
-          z-index: 2;
         }
       }
       .text {

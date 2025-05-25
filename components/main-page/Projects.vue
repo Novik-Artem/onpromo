@@ -40,9 +40,6 @@ export default {
 <style lang="scss" module>
 .content {
   padding-top: 3rem;
-  @include custom(650) {
-    padding-top: 5rem;
-  }
   .title {
     padding: 4rem 0 0 0;
     @include Title;

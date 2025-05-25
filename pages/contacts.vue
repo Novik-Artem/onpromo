@@ -4,14 +4,23 @@
       <div :class="$style.title">Контакты</div>
       <div :class="$style.subtext">Всегда на связи</div>
       <a href="mailto:onpromoby@gmail.com">onpromoby@gmail.com</a>
-      <a href="tel:+37533643435"> +375 (33) 643-40-35</a>
-      <a
-        href="https://www.instagram.com/onpromo.by/"
-        target="__blank"
-        :class="$style.icon"
-      >
-        <img src="/icons/inst.svg" alt="" />
-      </a>
+      <a href="tel:+375336434035"> +375 (33) 643-40-35</a>
+      <div :class="$style.icons">
+        <a
+          href="https://www.instagram.com/onpromo.by/"
+          target="__blank"
+          :class="$style.icon"
+        >
+          <img src="/icons/inst.svg" alt="" />
+        </a>
+        <a href="https://t.me/onpromoby" target="__blank" :class="$style.icon">
+          <img
+            src="/icons/telegram.svg"
+            alt=""
+            :class="[$style.icon, $style.tg]"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -45,8 +54,21 @@
       color: $white;
       font-size: 1.2rem;
     }
-    .icon {
-      cursor: pointer;
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .icon {
+        cursor: pointer;
+        width: 3.125rem;
+        height: 3.125rem;
+        &.tg {
+          position: relative;
+          top: 0.125rem;
+          width: 2.85rem;
+          height: 2.85rem;
+        }
+      }
     }
   }
 }
