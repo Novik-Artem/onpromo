@@ -14,8 +14,8 @@
       </div>
       <div :class="[$style.menu, { [$style.open]: isBurgerOpen }]">
         <div v-for="item in links" :key="item.text">
-          <div @click="$router.push(item.link)">
-            <div @click="closeBurger" :class="$style.link">{{ item.text }}</div>
+          <div @click="setLink(item.link)">
+            <div :class="$style.link">{{ item.text }}</div>
           </div>
         </div>
       </div>
@@ -64,6 +64,10 @@ export default {
     closeBurger() {
       this.$store.commit('popups/resetBurger')
       document.body.classList.remove('lock')
+    },
+    setLink(link) {
+      this.$router.push(link)
+      this.closeBurger()
     },
   },
 }

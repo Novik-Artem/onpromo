@@ -61,6 +61,8 @@ export default {
     }
     .item {
       position: relative;
+      cursor: pointer;
+      touch-action: manipulation;
       &:hover {
         .desc {
           height: 100%;
