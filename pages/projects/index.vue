@@ -141,14 +141,9 @@ export default {
           justify-content: center;
         }
         .image {
-          height: 30rem;
+          height: 18.75rem;
           width: 100%;
-          @include custom(1000) {
-            height: 25rem;
-          }
-          @include custom(650) {
-            height: 20rem;
-          }
+
           img {
             object-fit: cover;
             border-radius: 0.5rem;
