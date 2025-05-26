@@ -14,6 +14,7 @@ import { createStore } from './store.js'
 /* Plugins */
 
 import nuxt_plugin_plugin_064b6325 from 'nuxt_plugin_plugin_064b6325' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_vuescrollto_67dcae41 from 'nuxt_plugin_vuescrollto_67dcae41' // Source: .\\vue-scrollto.js (mode: 'client')
 import nuxt_plugin_axios_756ab270 from 'nuxt_plugin_axios_756ab270' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_axiosport_acead86e from 'nuxt_plugin_axiosport_acead86e' // Source: ..\\plugins\\axios-port.js (mode: 'all')
 
@@ -215,6 +216,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_064b6325 === 'function') {
     await nuxt_plugin_plugin_064b6325(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_vuescrollto_67dcae41 === 'function') {
+    await nuxt_plugin_vuescrollto_67dcae41(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_756ab270 === 'function') {

@@ -14,8 +14,10 @@
       </div>
       <div :class="[$style.menu, { [$style.open]: isBurgerOpen }]">
         <div v-for="item in links" :key="item.text">
-          <div @click="setLink(item.link)">
-            <div :class="$style.link">{{ item.text }}</div>
+          <div @click="setLink(item.link, item.id)">
+            <div :class="$style.link">
+              {{ item.text }}
+            </div>
           </div>
         </div>
       </div>
@@ -34,11 +36,13 @@ export default {
         },
         {
           text: 'Оборудование',
-          link: '/' + '#equipment',
+          link: '/#equipment',
+          id: '#equipment',
         },
         {
           text: 'Услуги',
-          link: '/' + '#services',
+          link: '/#services',
+          id: '#services',
         },
         {
           text: 'О компании',
@@ -65,9 +69,12 @@ export default {
       this.$store.commit('popups/resetBurger')
       document.body.classList.remove('lock')
     },
-    setLink(link) {
+    setLink(link, id) {
       this.$router.push(link)
       this.closeBurger()
+      if (id) {
+        this.$scrollTo(id, 500, { offset: 0 })
+      }
     },
   },
 }

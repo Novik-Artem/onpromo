@@ -65,6 +65,7 @@ export default {
   ],
   modules: [
     '@nuxtjs/axios',
+    'vue-scrollto/nuxt',
   ],
   axios: {
     baseURL: 'http://dev-314.ru/api/'

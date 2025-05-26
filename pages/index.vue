@@ -19,24 +19,6 @@ export default {
     Equipment,
     Services,
   },
-  mounted() {
-    setTimeout(() => {
-      window.location.hash = ''
-    }, 500)
-  },
-  computed: {
-    route() {
-      return this.$route
-    },
-  },
-  watch: {
-    route() {
-      setTimeout(() => {
-        window.location.hash = ''
-      }, 500)
-      //this.$route.fullPath.split('#')[0]
-    },
-  },
 }
 </script>
 
