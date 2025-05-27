@@ -16,9 +16,7 @@
         </div>
         <div :class="$style.desc">
           <div :class="$style.subtitle">{{ item.name }}</div>
-          <div :class="$style.subtext">
-            {{ item.description }}
-          </div>
+          <div :class="$style.subtext" v-html="item.description"></div>
         </div>
       </div>
     </div>
