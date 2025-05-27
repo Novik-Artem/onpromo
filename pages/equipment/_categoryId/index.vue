@@ -7,6 +7,7 @@
         autoplay
         muted
         loop
+        playsinline
         :class="$style.video"
         v-if="category.video_file"
       ></video>

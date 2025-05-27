@@ -2,7 +2,12 @@
   <div :class="$style.content" id="services">
     <div :class="$style.title">Услуги</div>
     <div :class="$style.services">
-      <div :class="$style.item" v-for="item in services" :key="item.id">
+      <div
+        :class="[$style.item, { [$style.active]: activeItem === index }]"
+        v-for="(item, index) in services"
+        :key="item.id"
+        @click="openDesc(index)"
+      >
         <div :class="$style.image">
           <img :src="item.image" alt="" />
         </div>
@@ -22,9 +27,21 @@
 
 <script>
 export default {
+  data() {
+    return {
+      activeItem: '',
+    }
+  },
   computed: {
     services() {
       return this.$store.state.services.services
+    },
+  },
+  methods: {
+    openDesc(index) {
+      this.activeItem === index
+        ? (this.activeItem = '')
+        : (this.activeItem = index)
     },
   },
 }
@@ -61,15 +78,21 @@ export default {
     }
     .item {
       position: relative;
-      cursor: pointer;
-      touch-action: manipulation;
       &:hover {
         .desc {
           height: 100%;
           z-index: 2;
         }
       }
-      &:active {
+      @include tablet {
+        &:hover {
+          .desc {
+            height: 0;
+            z-index: -1;
+          }
+        }
+      }
+      &.active {
         .desc {
           height: 100%;
           z-index: 2;
@@ -90,9 +113,6 @@ export default {
         justify-content: center;
         border-radius: 0.5rem;
         gap: 1rem;
-        @include custom(1024) {
-          display: none;
-        }
         .subtitle {
           font-size: 1.5rem;
           @include custom(640) {

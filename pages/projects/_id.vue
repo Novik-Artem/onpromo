@@ -7,6 +7,7 @@
         autoplay
         muted
         loop
+        playsinline
         :class="$style.video"
         v-if="project.video_file"
       ></video>
@@ -35,6 +36,7 @@
             autoplay
             muted
             loop
+            playsinline
             :class="$style.video"
           ></video>
         </div>

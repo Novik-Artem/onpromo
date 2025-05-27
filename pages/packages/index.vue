@@ -40,7 +40,13 @@
               v-for="video in item.videos"
               :key="video"
             >
-              <video :src="video.video_file" autoplay muted loop></video>
+              <video
+                :src="video.video_file"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
             </div>
             <div :class="$style.smeta">
               <img :src="item.image" alt="" />

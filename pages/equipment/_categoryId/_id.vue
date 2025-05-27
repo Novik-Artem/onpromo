@@ -38,6 +38,7 @@
             autoplay
             muted
             loop
+            playsinline
             :class="$style.video"
           ></video>
         </div>
