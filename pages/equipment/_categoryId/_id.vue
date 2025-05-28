@@ -68,20 +68,30 @@ export default {
     .top {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 3rem;
-      gap: 1rem;
+      gap: 1.5rem;
       padding: 2rem 0 0 0;
-      @include custom(500) {
+      @include custom(590) {
         flex-direction: column;
       }
       .title {
+        max-width: 35rem;
         font-size: 5rem;
         font-weight: 700;
         margin: 0 0 4rem 0;
         @include custom(950) {
           padding: 2rem 0 0 0;
-          font-size: 2rem;
+          font-size: 4rem;
           margin: 0 0 2rem 0;
+        }
+        @include custom(750) {
+          padding: 2rem 0 0 0;
+          font-size: 3rem;
+          margin: 0 0 1.5rem 0;
+        }
+        @include custom(590) {
+          text-align: center;
         }
         @include custom(430) {
           font-size: 1.8rem;
