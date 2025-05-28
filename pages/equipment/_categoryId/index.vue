@@ -154,7 +154,7 @@ export default {
         .cards {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-          gap: 0.5rem;
+          gap: 1rem;
           @include custom(1000) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
           }
@@ -173,13 +173,23 @@ export default {
               bottom: 1rem;
             }
             .name {
+              padding-top: 2.5rem;
+              padding-left: 2rem;
               position: absolute;
-              top: 30%;
-              left: 1rem;
+              top: 0;
+              left: 0;
               z-index: 3;
               font-weight: 700;
               font-size: 1.375rem;
+              max-width: 7rem;
               line-height: 120%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                rgb(0, 0, 0),
+                rgb(0, 0, 0),
+                rgba(0, 0, 0, 0) 100%
+              );
             }
             .image {
               height: 200px;

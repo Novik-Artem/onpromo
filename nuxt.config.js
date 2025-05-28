@@ -68,7 +68,7 @@ export default {
     'vue-scrollto/nuxt',
   ],
   axios: {
-    baseURL: 'http://dev-314.ru/api/'
+    baseURL: 'https://onpromo.by/api/'
   },
   build: {},
 }

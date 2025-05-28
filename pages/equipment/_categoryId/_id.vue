@@ -70,9 +70,9 @@ export default {
       justify-content: space-between;
       align-items: center;
       margin-bottom: 3rem;
-      gap: 1.5rem;
+      gap: 1rem;
       padding: 2rem 0 0 0;
-      @include custom(590) {
+      @include custom(730) {
         flex-direction: column;
       }
       .title {
@@ -80,18 +80,21 @@ export default {
         font-size: 5rem;
         font-weight: 700;
         margin: 0 0 4rem 0;
-        @include custom(950) {
-          padding: 2rem 0 0 0;
-          font-size: 4rem;
-          margin: 0 0 2rem 0;
-        }
-        @include custom(750) {
+        @include custom(1080) {
           padding: 2rem 0 0 0;
           font-size: 3rem;
-          margin: 0 0 1.5rem 0;
+          margin: 0 0 2rem 0;
+          max-width: 28rem;
         }
-        @include custom(590) {
-          text-align: center;
+        @include custom(870) {
+          padding: 2rem 0 0 0;
+          font-size: 2rem;
+          margin: 0 0 1.5rem 0;
+          max-width: 20rem;
+        }
+        @include custom(730) {
+          max-width: 30rem;
+          margin: 0 auto 2rem auto;
         }
         @include custom(430) {
           font-size: 1.8rem;

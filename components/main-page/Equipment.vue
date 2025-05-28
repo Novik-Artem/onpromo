@@ -64,15 +64,16 @@ export default {
 }
 .services {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
-  @include custom(1060) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  .item:first-child {
+    grid-column-start: span 2;
+    @include custom(520) {
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
   }
-  @include custom(940) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  @include custom(700) {
+  @include custom(900) {
     grid-template-columns: 1fr 1fr;
   }
   @include custom(520) {
