@@ -16,7 +16,6 @@
     <div :class="$style.content">
       <div :class="$style.top">
         <div :class="$style.title">{{ category.name }}</div>
-        <div :class="$style.desc">{{ category.description }}</div>
       </div>
       <div :class="$style.items">
         <div
@@ -119,22 +118,6 @@ export default {
         max-width: 25rem;
         font-size: 2.3rem;
       }
-    }
-    /*.title {
-      @include BigTitle;
-      max-width: 12rem;
-      margin: 0 0 3rem 0;
-      @include custom(750) {
-        font-size: 2.8rem;
-        margin: 0 0 1rem 0;
-      }
-      @include custom(400) {
-        font-size: 2.4rem;
-      }
-    }*/
-    .desc {
-      text-transform: uppercase;
-      margin: 0 0 4rem 0;
     }
     .items {
       padding-top: 32rem;
