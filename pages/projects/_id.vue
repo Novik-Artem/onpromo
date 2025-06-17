@@ -9,9 +9,16 @@
         loop
         playsinline
         :class="$style.video"
+        loading="lazy"
         v-if="project.video_file"
       ></video>
-      <img v-else :src="project.banner" alt="" :class="$style.image" />
+      <img
+        v-else
+        :src="project.banner"
+        alt=""
+        :class="$style.image"
+        loading="lazy"
+      />
     </div>
     <div :class="$style.content">
       <div :class="$style.title">{{ project.name }}</div>
@@ -22,7 +29,7 @@
           :key="item.image"
           :class="$style.item"
         >
-          <img :src="item.image" alt="" />
+          <img :src="item.image" alt="" loading="lazy" />
         </div>
       </div>
       <div :class="$style.videos" v-if="project.videos">
@@ -37,6 +44,7 @@
             muted
             loop
             playsinline
+            loading="lazy"
             :class="$style.video"
           ></video>
         </div>

@@ -31,6 +31,7 @@
       muted
       playsinline
       loop
+      loading="lazy"
       :class="$style.video"
     ></video>
   </div>

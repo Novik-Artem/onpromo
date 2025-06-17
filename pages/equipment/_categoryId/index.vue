@@ -8,10 +8,17 @@
         muted
         loop
         playsinline
+        loading="lazy"
         :class="$style.video"
         v-if="category.video_file"
       ></video>
-      <img v-else :src="category.banner" alt="" :class="$style.image" />
+      <img
+        v-else
+        :src="category.banner"
+        alt=""
+        :class="$style.image"
+        loading="lazy"
+      />
     </div>
     <div :class="$style.content">
       <div :class="$style.top">
