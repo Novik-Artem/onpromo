@@ -9,9 +9,6 @@
       </div>
       <div :class="$style.bottom">
         <div>
-          <div :class="$style.category">
-            Категория: {{ equipment.category?.name }}
-          </div>
           <div :class="$style.desc" v-html="equipment.description"></div>
         </div>
         <div :class="$style.manufacturer" v-if="equipment.manufacturer">
@@ -112,18 +109,6 @@ export default {
         }
       }
     }
-    .category {
-      font-size: 1.375rem;
-      font-weight: 400;
-      line-height: 120%;
-      margin: 0 0 2rem 0;
-      @include custom(950) {
-        font-size: 1.5rem;
-      }
-      @include custom(490) {
-        font-size: 1rem;
-      }
-    }
     .bottom {
       display: grid;
       grid-template-columns: 3fr 1fr;
@@ -183,9 +168,6 @@ export default {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
-      // @include custom(760) {
-      //   grid-template-columns: 1fr;
-      // }
       .item {
         height: 30rem;
         max-width: 70rem;

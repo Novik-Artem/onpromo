@@ -26,7 +26,7 @@
     </div>
     <div :class="$style.bg"></div>
     <video
-      src="/videos/2.MOV"
+      src="/videos/main.mp4"
       autoplay
       muted
       playsinline

@@ -146,13 +146,13 @@ export default {
     }
     .videos {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 1rem;
-      @include custom(760) {
-        grid-template-columns: 1fr;
-      }
       .item {
-        height: 20rem;
+        height: 30rem;
+        @include custom(630) {
+          height: 18rem;
+        }
         video {
           width: 100%;
           height: 100%;
