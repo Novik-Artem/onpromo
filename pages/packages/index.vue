@@ -158,11 +158,10 @@ export default {
           height: 100vh;
           margin: 0 auto 2rem auto;
         }
-        &:nth-child(2) {
-          max-width: 50rem;
-          max-height: 50rem;
-          margin: 0 auto 2rem auto;
-        }
+        max-width: 50rem;
+        max-height: 50rem;
+        margin: 0 auto 2rem auto;
+        overflow: hidden;
         video {
           width: 100%;
           height: 100%;
