@@ -35,18 +35,20 @@
             <div :class="$style.image">
               <img :src="item.preview_image" alt="" />
             </div>
-            <div
-              :class="$style.video"
-              v-for="video in item.videos"
-              :key="video"
-            >
-              <video
-                :src="video.video_file"
-                autoplay
-                muted
-                loop
-                playsinline
-              ></video>
+            <div :class="$style.videos">
+              <div
+                v-for="video in item.videos"
+                :key="video"
+                :class="$style.video"
+              >
+                <video
+                  :src="video.video_file"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video>
+              </div>
             </div>
             <div :class="$style.smeta">
               <img :src="item.image" alt="" />
@@ -151,10 +153,16 @@ export default {
         }
       }
       .video {
-        max-width: 50rem;
-        height: 100vh;
-        margin: 0 auto 2rem auto;
-        // overflow: hidden;
+        &:first-child {
+          max-width: 50rem;
+          height: 100vh;
+          margin: 0 auto 2rem auto;
+        }
+        &:nth-child(2) {
+          max-width: 50rem;
+          max-height: 50rem;
+          margin: 0 auto 2rem auto;
+        }
         video {
           width: 100%;
           height: 100%;
