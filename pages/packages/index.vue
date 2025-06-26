@@ -4,28 +4,28 @@
       <div :class="$style.title">Пакеты</div>
       <div :class="$style.tabs">
         <div
-          :class="[$style.tab, { [$style.active]: activeTab === 'пакет 420' }]"
-          @click="activeTab = 'пакет 420'"
+          :class="[$style.tab, { [$style.active]: activeTab === 'Пакет 450$' }]"
+          @click="activeTab = 'Пакет 450$'"
         >
-          <div><span>Пакет</span> 420</div>
+          <div><span>Пакет</span> 450$</div>
         </div>
         <div
-          :class="[$style.tab, { [$style.active]: activeTab === 'пакет 600' }]"
-          @click="activeTab = 'пакет 600'"
+          :class="[$style.tab, { [$style.active]: activeTab === 'Пакет 600$' }]"
+          @click="activeTab = 'Пакет 600$'"
         >
-          <div><span>Пакет</span> 600</div>
+          <div><span>Пакет</span> 600$</div>
         </div>
         <div
-          :class="[$style.tab, { [$style.active]: activeTab === 'пакет 620' }]"
-          @click="activeTab = 'пакет 620'"
+          :class="[$style.tab, { [$style.active]: activeTab === 'Пакет 650$' }]"
+          @click="activeTab = 'Пакет 650$'"
         >
-          <div><span>Пакет</span> 620</div>
+          <div><span>Пакет</span> 650$</div>
         </div>
         <div
-          :class="[$style.tab, { [$style.active]: activeTab === 'пакет 800' }]"
-          @click="activeTab = 'пакет 800'"
+          :class="[$style.tab, { [$style.active]: activeTab === 'Пакет 800$' }]"
+          @click="activeTab = 'Пакет 800$'"
         >
-          <div><span>Пакет</span> 800</div>
+          <div><span>Пакет</span> 800$</div>
         </div>
       </div>
       <div :class="$style.packages">
@@ -70,7 +70,7 @@ export default {
   },
   data() {
     return {
-      activeTab: 'пакет 420',
+      activeTab: 'Пакет 450$',
     }
   },
 }
@@ -143,7 +143,7 @@ export default {
       .image {
         max-width: 50rem;
         max-height: 50rem;
-        margin: 0 auto;
+        margin: 0 auto 2rem auto;
         object-fit: cover;
         img {
           width: 100%;
@@ -152,9 +152,9 @@ export default {
       }
       .video {
         max-width: 50rem;
-        max-height: 50rem;
-        margin: 0 auto;
-        overflow: hidden;
+        height: 100vh;
+        margin: 0 auto 2rem auto;
+        // overflow: hidden;
         video {
           width: 100%;
           height: 100%;
@@ -163,10 +163,10 @@ export default {
       }
       .smeta {
         max-width: 50rem;
-        max-height: 50rem;
+        //max-height: 50rem;
         margin: 0 auto;
         object-fit: cover;
-        overflow-y: scroll;
+
         img {
           width: 100%;
           height: 100%;

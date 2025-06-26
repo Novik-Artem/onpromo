@@ -9,16 +9,9 @@
         loop
         playsinline
         :class="$style.video"
-        loading="lazy"
         v-if="project.video_file"
       ></video>
-      <img
-        v-else
-        :src="project.banner"
-        alt=""
-        :class="$style.image"
-        loading="lazy"
-      />
+      <img v-else :src="project.banner" alt="" :class="$style.image" />
     </div>
     <div :class="$style.content">
       <div :class="$style.title">{{ project.name }}</div>
@@ -29,7 +22,7 @@
           :key="item.image"
           :class="$style.item"
         >
-          <img :src="item.image" alt="" loading="lazy" />
+          <img :src="item.image" alt="" />
         </div>
       </div>
       <div :class="$style.videos" v-if="project.videos">
@@ -44,7 +37,6 @@
             muted
             loop
             playsinline
-            loading="lazy"
             :class="$style.video"
           ></video>
         </div>
@@ -148,6 +140,9 @@ export default {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
+      max-width: 51rem;
+      margin: 0 auto;
+      justify-items: center;
       .item {
         height: 30rem;
         @include custom(630) {

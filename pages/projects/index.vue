@@ -9,7 +9,6 @@
         playsinline
         loop
         :class="$style.video"
-        loading="lazy"
       ></video>
     </div>
     <div :class="$style.content">

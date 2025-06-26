@@ -4,7 +4,7 @@
       <div :class="$style.top">
         <div :class="$style.title">{{ equipment.name }}</div>
         <div :class="$style.img">
-          <img :src="equipment.image" alt="" loading="lazy" />
+          <img :src="equipment.image" alt="" />
         </div>
       </div>
       <div :class="$style.bottom">
@@ -21,7 +21,7 @@
           :key="item.image"
           :class="$style.item"
         >
-          <img :src="item.image" alt="" loading="lazy" />
+          <img :src="item.image" alt="" />
         </div>
       </div>
       <div :class="$style.videos" v-if="equipment.videos">
@@ -37,7 +37,6 @@
             loop
             playsinline
             :class="$style.video"
-            loading="lazy"
           ></video>
         </div>
       </div>
