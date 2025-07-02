@@ -9,7 +9,7 @@ export default {
       lang: 'ru',
     },
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicons/logo.jpg' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicons/logo.ico' },
     ],
     meta: [
       { charset: 'utf-8' },
@@ -19,22 +19,38 @@ export default {
         name: 'description',
         content: 'ONPROMO.BY',
       },
+      {
+        name: "description",
+        content: "Брест. Аренда света, звука, экранов, спецэффекты. Звук и свет для мероприятий. Концертное оборудование, аренда сцены"
+      },
+      {
+        property: "og:locale",
+        content: "ru_RU"
+      },
       { name: 'format-detection', content: 'telephone=no' },
       {
         property: 'og:title',
         content: 'ONPROMO.BY',
       },
       {
+        property: "og:site_name",
+        content: "ONPROMO.BY"
+      },
+      {
         property: 'og:image',
-        content: '/favicons/logo.jpg',
+        content: '/favicons/logo.ico',
       },
       {
         property: 'og:description',
-        content: 'ONPROMO.BY',
+        content: 'Брест. Аренда света, звука, экранов, спецэффекты. Звук и свет для мероприятий. Концертное оборудование, аренда сцены',
+      },
+      {
+        name: 'twitter:card',
+        content: '/favicons/logo.ico',
       },
       {
         name: 'twitter:image',
-        content: '/favicons/logo.jpg',
+        content: '/favicons/logo.ico',
       },
       {
         name: 'twitter:title',
@@ -42,8 +58,12 @@ export default {
       },
       {
         name: 'twitter:description',
-        content: 'ONPROMO.BY',
+        content: 'Брест. Аренда света, звука, экранов, спецэффекты. Звук и свет для мероприятий. Концертное оборудование, аренда сцены',
       },
+      {
+        name: 'keywords',
+        content: 'аренда звук свет экраны, аренда звук свет экраны Брест, световое оборудование, звуковое оборудование, сценическое оборудование, экраны, аренда света, аренда звука, аренда экрана, спецэффекты, прокат света, прокат звука, прокат экранов, звук для мероприятий, свет для мероприятий, экраны для мероприятий, оборудование на свадьбу, свет на свадьбу, звук на свадьбу, экран на свадьбу, тяжёлый дым, концертное оборудование, оборудование для концертов, аренда сцены, сцена на праздники, сцена на мероприятие, сценический комплекс'
+      }
     ],
   },
   loading: { color: 'transparent' },
