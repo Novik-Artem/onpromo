@@ -4,10 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _a0823440 = () => interopDefault(import('..\\pages\\auth.vue' /* webpackChunkName: "pages/auth" */))
 const _54d7ca16 = () => interopDefault(import('..\\pages\\company.vue' /* webpackChunkName: "pages/company" */))
 const _50ed69ea = () => interopDefault(import('..\\pages\\contacts.vue' /* webpackChunkName: "pages/contacts" */))
+const _733f5adc = () => interopDefault(import('..\\pages\\media.vue' /* webpackChunkName: "pages/media" */))
 const _d0f6c386 = () => interopDefault(import('..\\pages\\packages\\index.vue' /* webpackChunkName: "pages/packages/index" */))
 const _653d1090 = () => interopDefault(import('..\\pages\\projects\\index.vue' /* webpackChunkName: "pages/projects/index" */))
+const _1b536071 = () => interopDefault(import('..\\pages\\registration.vue' /* webpackChunkName: "pages/registration" */))
 const _78ee266c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 const _15f13d00 = () => interopDefault(import('..\\pages\\equipment\\_categoryId\\index.vue' /* webpackChunkName: "pages/equipment/_categoryId/index" */))
 const _1af5f6f8 = () => interopDefault(import('..\\pages\\projects\\_id.vue' /* webpackChunkName: "pages/projects/_id" */))
@@ -25,6 +28,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/auth",
+    component: _a0823440,
+    name: "auth"
+  }, {
     path: "/company",
     component: _54d7ca16,
     name: "company"
@@ -33,6 +40,10 @@ export const routerOptions = {
     component: _50ed69ea,
     name: "contacts"
   }, {
+    path: "/media",
+    component: _733f5adc,
+    name: "media"
+  }, {
     path: "/packages",
     component: _d0f6c386,
     name: "packages"
@@ -40,6 +51,10 @@ export const routerOptions = {
     path: "/projects",
     component: _653d1090,
     name: "projects"
+  }, {
+    path: "/registration",
+    component: _1b536071,
+    name: "registration"
   }, {
     path: "/",
     component: _78ee266c,

@@ -1,5 +1,12 @@
 [
   {
+    "name": "auth",
+    "path": "/auth",
+    "component": "D:\\\\onpromo\\\\pages\\\\auth.vue",
+    "chunkName": "pages/auth",
+    "_name": "_a0823440"
+  },
+  {
     "name": "company",
     "path": "/company",
     "component": "D:\\\\onpromo\\\\pages\\\\company.vue",
@@ -14,6 +21,13 @@
     "_name": "_50ed69ea"
   },
   {
+    "name": "media",
+    "path": "/media",
+    "component": "D:\\\\onpromo\\\\pages\\\\media.vue",
+    "chunkName": "pages/media",
+    "_name": "_733f5adc"
+  },
+  {
     "name": "packages",
     "path": "/packages",
     "component": "D:\\\\onpromo\\\\pages\\\\packages\\\\index.vue",
@@ -26,6 +40,13 @@
     "component": "D:\\\\onpromo\\\\pages\\\\projects\\\\index.vue",
     "chunkName": "pages/projects/index",
     "_name": "_653d1090"
+  },
+  {
+    "name": "registration",
+    "path": "/registration",
+    "component": "D:\\\\onpromo\\\\pages\\\\registration.vue",
+    "chunkName": "pages/registration",
+    "_name": "_1b536071"
   },
   {
     "name": "index",

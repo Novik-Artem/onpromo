@@ -52,6 +52,10 @@ export default {
           text: 'Контакты',
           link: '/contacts',
         },
+        {
+          text: 'Медиа',
+          link: '/media',
+        },
       ],
     }
   },
@@ -112,10 +116,10 @@ export default {
       &.open {
         left: 0;
       }
-      @include custom(870) {
+      @include custom(980) {
         gap: 1rem;
       }
-      @include custom(768) {
+      @include custom(830) {
         position: absolute;
         top: 0;
         left: -100vw;
@@ -143,7 +147,7 @@ export default {
     }
     .burger {
       display: none;
-      @include custom(768) {
+      @include custom(830) {
         display: block;
         cursor: pointer;
         max-width: 2rem;
