@@ -3,7 +3,7 @@ import { Model } from './index'
 
 class Registration extends Model {
   async registration(user) {
-    const response = await API.post("/users/me/", {
+    const response = await API.post("/users/register/", {
       username: user.name,
       password: user.password,
       password2: user.password2
@@ -12,4 +12,4 @@ class Registration extends Model {
   }
 
 }
-export default new Registration('/users/me')
+export default new Registration('/users/register')

@@ -30,6 +30,14 @@
           placeholder="подтвердите пароль"
           v-model="user.password2"
         />
+        <div :class="$style.error" v-if="errors.username">
+          {{ errors.username }}
+        </div>
+        <!-- <div :class="$style.error" v-if="errors.password">
+          <div v-for="item in errors.password" :key="item">
+            {{ item }}
+          </div>
+        </div> -->
         <button :class="$style.button">Зарегистрироваться</button>
       </form>
     </div>
@@ -46,15 +54,22 @@ export default {
         password: '',
         password2: '',
       },
+      errors: {
+        username: '',
+        password: null,
+        other: '',
+      },
     }
   },
   methods: {
     async registration() {
-      const value = await Registration.registration(this.user)
-      if (value) {
-        this.$router.push('/auth')
+      if (this.user.password !== this.user.password2) {
+        this.error = 'пароли должны совпадать'
       } else {
-        this.$router.push('/registration')
+        const value = await Registration.registration(this.user)
+        if (value) {
+          this.$router.push('/auth')
+        }
       }
     },
   },
@@ -107,6 +122,11 @@ export default {
         background-color: $black;
         color: $white;
         border-radius: 1.5rem;
+        margin: 0 0 1.5rem 0;
+      }
+      .error {
+        color: red;
+        font-size: 0.85rem;
         margin: 0 0 1.5rem 0;
       }
       .button {

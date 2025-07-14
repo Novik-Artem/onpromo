@@ -22,19 +22,40 @@
         </a>
       </div>
     </div>
+    <div :class="$style.video">
+      <video src="/videos/contacts.mp4" autoplay muted playsinline loop></video>
+    </div>
   </div>
 </template>
 
 <style lang="scss" module>
 .container {
   @include container;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  @include custom(920) {
+    align-items: center;
+    gap: 1rem;
+  }
+  @include custom(860) {
+    flex-direction: column;
+    align-items: start;
+  }
+
   .content {
+    @include custom(860) {
+      order: 2;
+    }
     .title {
-      padding: 5rem 0 0 0;
+      padding: 3rem 0 0 0;
       @include Title;
       margin: 0 0 3rem 0;
       @include custom(650) {
-        margin: 0 0 2rem 0;
+        margin: 0 0 1rem 0;
+      }
+      @include custom(860) {
+        padding: 1rem 0 0 0;
       }
     }
     .subtext {
@@ -69,6 +90,24 @@
           height: 2.85rem;
         }
       }
+    }
+  }
+  .video {
+    max-width: 40rem;
+    max-height: 40rem;
+    @include custom(1230) {
+      max-width: 30rem;
+      max-height: 30rem;
+    }
+    @include custom(860) {
+      max-width: none;
+      order: 1;
+      padding-top: 2rem;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

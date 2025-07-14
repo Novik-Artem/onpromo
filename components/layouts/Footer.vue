@@ -43,13 +43,20 @@
               target="__blank"
               :class="$style.icon"
             >
-              <img src="/icons/telegram.svg" alt="" :class="[$style.icon, $style.tg]" />
+              <img
+                src="/icons/telegram.svg"
+                alt=""
+                :class="[$style.icon, $style.tg]"
+              />
             </a>
           </div>
           <div>
             <a href="mailto:onpromoby@gmail.com">onpromoby@gmail.com</a>
           </div>
           <a href="tel:+375336434035"> +375 (33) 643-40-35</a>
+          <a href="https://t.me/artur_levchuk" target="__blank">
+            тех поддержка
+          </a>
         </div>
       </div>
     </div>

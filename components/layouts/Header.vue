@@ -53,7 +53,7 @@ export default {
           link: '/contacts',
         },
         {
-          text: 'Медиа',
+          text: 'Для персонала',
           link: '/media',
         },
       ],
