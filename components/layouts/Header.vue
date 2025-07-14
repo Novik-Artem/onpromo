@@ -116,10 +116,10 @@ export default {
       &.open {
         left: 0;
       }
-      @include custom(980) {
+      @include custom(1066) {
         gap: 1rem;
       }
-      @include custom(830) {
+      @include custom(906) {
         position: absolute;
         top: 0;
         left: -100vw;
@@ -147,7 +147,7 @@ export default {
     }
     .burger {
       display: none;
-      @include custom(830) {
+      @include custom(906) {
         display: block;
         cursor: pointer;
         max-width: 2rem;
