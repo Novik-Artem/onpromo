@@ -1,60 +1,29 @@
 <template>
   <div :class="$style.container">
-    <div :class="$style.title">Документы для персонала</div>
-    <div :class="$style.content">
-      <div
-        :class="$style.media"
-        v-for="item in media.slice(0, 4)"
-        :key="item.id"
-      >
-        <div :class="$style.file" v-if="item.file_type === 'image'">
-          <a :href="item.file_url" target="__blank">
-            <img :src="item.file_url" alt="" />
-          </a>
-        </div>
-        <div :class="$style.file" v-else-if="item.file_type === 'video'">
-          <a :href="item.file_url" target="__blank">
-            <img src="/images/video.png" alt="" />
-          </a>
-        </div>
-        <div :class="$style.file" v-else-if="item.file_type === 'other'">
-          <a :href="item.file_url" target="__blank">
-            <div :class="$style.flex">
-              <img src="/images/file.png" alt="" />
-            </div>
-          </a>
-        </div>
-        <div :class="$style.text">
-          {{ item.category_title }} / {{ item.title }}
-        </div>
-      </div>
-    </div>
-    <div :class="$style.title">Документы для организаторов</div>
-    <div :class="$style.content">
-      <div
-        :class="$style.media"
-        v-for="item in media.slice(4, 8)"
-        :key="item.id"
-      >
-        <div :class="$style.file" v-if="item.file_type === 'image'">
-          <a :href="item.file_url" target="__blank">
-            <img :src="item.file_url" alt="" />
-          </a>
-        </div>
-        <div :class="$style.file" v-else-if="item.file_type === 'video'">
-          <a :href="item.file_url" target="__blank">
-            <img src="/images/video.png" alt="" />
-          </a>
-        </div>
-        <div :class="$style.file" v-else-if="item.file_type === 'other'">
-          <a :href="item.file_url" target="__blank">
-            <div :class="$style.flex">
-              <img src="/images/file.png" alt="" />
-            </div>
-          </a>
-        </div>
-        <div :class="$style.text">
-          {{ item.category_title }} / {{ item.title }}
+    <div :class="$style.category" v-for="item in media" :key="item.title">
+      <div :class="$style.title">{{ item.title }}</div>
+      <div :class="$style.content">
+        <div :class="$style.media" v-for="file in item.files" :key="file.id">
+          <div :class="$style.file" v-if="file.file_type === 'image'">
+            <a :href="file.file_url" target="__blank">
+              <img :src="file.file_url" alt="" />
+            </a>
+          </div>
+          <div :class="$style.file" v-else-if="file.file_type === 'video'">
+            <a :href="file.file_url" target="__blank">
+              <img src="/images/video.png" alt="" />
+            </a>
+          </div>
+          <div :class="$style.file" v-else-if="file.file_type === 'other'">
+            <a :href="file.file_url" target="__blank">
+              <div :class="$style.flex">
+                <img src="/images/file.png" alt="" />
+              </div>
+            </a>
+          </div>
+          <div :class="$style.text">
+            {{ file.title }}
+          </div>
         </div>
       </div>
     </div>

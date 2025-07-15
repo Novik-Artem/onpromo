@@ -15,6 +15,20 @@
         <input
           :class="$style.input"
           type="text"
+          placeholder="имя"
+          v-model="user.firstname"
+          required
+        />
+        <input
+          :class="$style.input"
+          type="text"
+          placeholder="фамилия"
+          v-model="user.lastname"
+          required
+        />
+        <input
+          :class="$style.input"
+          type="text"
           placeholder="логин"
           v-model="user.name"
           required
@@ -62,6 +76,8 @@ export default {
     return {
       user: {
         name: '',
+        firstname: '',
+        lastname: '',
         password: '',
         password2: '',
       },
