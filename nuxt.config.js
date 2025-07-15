@@ -34,7 +34,7 @@ export default {
       },
       {
         property: 'og:image',
-        content: '/favicons/logo.png',
+        content: 'https://onpromo.by/favicons/logo.png',
       },
       {
         property: 'og:description',
@@ -46,7 +46,7 @@ export default {
       },
       {
         name: 'twitter:image',
-        content: '/favicons/logo.png',
+        content: 'https://onpromo.by/favicons/logo.png',
       },
       {
         name: 'twitter:title',
