@@ -10,6 +10,7 @@ export default {
     },
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicons/logo.ico' },
+      { rel: 'icon', type: 'image/png', href: '/favicons/logo.png' },
     ],
     meta: [
       { charset: 'utf-8' },
@@ -33,7 +34,7 @@ export default {
       },
       {
         property: 'og:image',
-        content: '/favicons/logo.ico',
+        content: '/favicons/logo.png',
       },
       {
         property: 'og:description',
@@ -45,7 +46,7 @@ export default {
       },
       {
         name: 'twitter:image',
-        content: '/favicons/logo.ico',
+        content: '/favicons/logo.png',
       },
       {
         name: 'twitter:title',
