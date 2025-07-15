@@ -11,8 +11,16 @@ export default {
       lang: 'ru',
     },
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicons/logo.ico' },
-      { rel: 'icon', type: 'image/png', href: '/favicons/logo.png' },
+      {
+        rel: "canonical",
+        href: url,
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: `/favicon.ico`,
+      },
     ],
     meta: [
       { charset: 'utf-8' },
