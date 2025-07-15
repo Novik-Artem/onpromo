@@ -17,15 +17,35 @@
           type="text"
           placeholder="логин"
           v-model="user.name"
+          required
         />
-        <input
-          :class="$style.input"
-          type="password"
-          placeholder="пароль"
-          v-model="user.password"
-        />
+        <div :class="$style.password">
+          <input
+            :class="$style.input"
+            :type="passwordType"
+            placeholder="пароль"
+            v-model="user.password"
+            required
+          />
+          <div :class="$style.eye" @click="changePasswordType">
+            <img v-if="passwordType === 'text'" src="/icons/eye.svg" alt="" />
+            <img
+              v-if="passwordType === 'password'"
+              src="/icons/eye-close.svg"
+              alt=""
+            />
+          </div>
+        </div>
         <div :class="$style.error" v-if="error">
-          {{ error.non_field_errors[0] }}
+          {{ error.non_field_errors[0] }} <br />
+          <p>
+            Возможно вы еще не получили подтверждение регистрации, в таком
+            случае попробуйте позже.
+          </p>
+          <p>
+            Если регистрация подтверждена - проверьте правильность введенных
+            данных
+          </p>
         </div>
         <button :class="$style.button">войти</button>
       </form>
@@ -43,6 +63,7 @@ export default {
         password: '',
       },
       error: null,
+      passwordType: 'password',
     }
   },
   methods: {
@@ -57,6 +78,9 @@ export default {
           this.$router.push('/auth')
         }
       }
+    },
+    changePasswordType() {
+      this.passwordType = this.passwordType === 'password' ? 'text' : 'password'
     },
   },
 }
@@ -114,6 +138,18 @@ export default {
         color: red;
         font-size: 0.85rem;
         margin: 0 0 1.5rem 0;
+        p {
+          margin: 0.5rem 0 0 0;
+        }
+      }
+      .password {
+        position: relative;
+        .eye {
+          cursor: pointer;
+          position: absolute;
+          top: 0.8rem;
+          right: 1rem;
+        }
       }
       .button {
         border: 1px solid $white;

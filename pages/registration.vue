@@ -17,27 +17,38 @@
           type="text"
           placeholder="логин"
           v-model="user.name"
+          required
         />
-        <input
-          :class="$style.input"
-          type="password"
-          placeholder="пароль"
-          v-model="user.password"
-        />
+        <div :class="$style.password">
+          <input
+            :class="$style.input"
+            :type="passwordType"
+            placeholder="пароль"
+            v-model="user.password"
+            required
+          />
+          <div :class="$style.eye" @click="changePasswordType">
+            <img v-if="passwordType === 'text'" src="/icons/eye.svg" alt="" />
+            <img
+              v-if="passwordType === 'password'"
+              src="/icons/eye-close.svg"
+              alt=""
+            />
+          </div>
+        </div>
         <input
           :class="$style.input"
           type="password"
           placeholder="подтвердите пароль"
           v-model="user.password2"
+          required
         />
         <div :class="$style.error" v-if="errors.username">
           {{ errors.username }}
         </div>
-        <!-- <div :class="$style.error" v-if="errors.password">
-          <div v-for="item in errors.password" :key="item">
-            {{ item }}
-          </div>
-        </div> -->
+        <div :class="$style.error" v-if="errors.password">
+          {{ errors.password }}
+        </div>
         <button :class="$style.button">Зарегистрироваться</button>
       </form>
     </div>
@@ -56,21 +67,38 @@ export default {
       },
       errors: {
         username: '',
-        password: null,
+        password: '',
         other: '',
       },
+      passwordType: 'password',
     }
   },
   methods: {
     async registration() {
       if (this.user.password !== this.user.password2) {
-        this.error = 'пароли должны совпадать'
+        this.errors.password = 'пароли должны совпадать'
       } else {
         const value = await Registration.registration(this.user)
-        if (value) {
+        if (value.username && typeof value.username !== 'string') {
+          this.errors.username = 'Пользователь с таким именем уже существует'
+          return
+        }
+        if (this.user.password.length <= 8) {
+          this.errors.password = 'Пароль должен быть не менее 8 символов'
+          return
+        }
+        if (
+          value.password?.[0] ==
+          'Введённый пароль слишком широко распространён.'
+        ) {
+          this.errors.password = 'Введённый пароль слишком широко распространён'
+        } else {
           this.$router.push('/auth')
         }
       }
+    },
+    changePasswordType() {
+      this.passwordType = this.passwordType === 'password' ? 'text' : 'password'
     },
   },
 }
@@ -123,6 +151,15 @@ export default {
         color: $white;
         border-radius: 1.5rem;
         margin: 0 0 1.5rem 0;
+      }
+      .password {
+        position: relative;
+        .eye {
+          cursor: pointer;
+          position: absolute;
+          top: 0.8rem;
+          right: 1rem;
+        }
       }
       .error {
         color: red;
