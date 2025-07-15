@@ -21,8 +21,12 @@
         <img src="/icons/inst.svg" alt="" />
       </a> -->
     </div>
-    <div :class="$style.video">
-      <video src="/videos/about.mp4" autoplay muted playsinline loop></video>
+    <div :class="$style.media">
+      <div :class="$style.bg"></div>
+      <div :class="$style.video">
+        <video src="/videos/about.mp4" autoplay muted playsinline loop></video>
+      </div>
+      <div :class="$style.bg2"></div>
     </div>
   </div>
 </template>
@@ -31,14 +35,8 @@
 .container {
   @include container;
   display: flex;
-  justify-content: space-between;
-  gap: 3rem;
   align-items: center;
 
-  @include custom(920) {
-    align-items: center;
-    gap: 1rem;
-  }
   @include custom(990) {
     flex-direction: column;
     align-items: start;
@@ -51,11 +49,16 @@
       padding: 5rem 0 0 0;
       @include Title;
       margin: 0 0 2rem 0;
+
+      @include custom(990) {
+        padding: 1rem 0 0 0;
+      }
       @include custom(650) {
         margin: 0 0 1rem 0;
       }
-      @include custom(990) {
-        padding: 1rem 0 0 0;
+      @include custom(460) {
+        margin: 0 0 1rem 0;
+        font-size: 3.6rem;
       }
     }
     .subtext {
@@ -63,6 +66,9 @@
       max-width: 35rem;
       line-height: 140%;
       margin: 0 0 3rem 0;
+      @include custom(990) {
+        max-width: none;
+      }
       .link {
         color: $white;
       }
@@ -74,27 +80,53 @@
       cursor: pointer;
     }
   }
-  .video {
-    max-width: 40rem;
-    max-height: 40rem;
-    @include custom(1150) {
-      max-width: 35rem;
-      max-height: 30rem;
+  .media {
+    position: relative;
+    .video {
+      max-width: 50rem;
+      max-height: 100%;
+      @include custom(1140) {
+        max-width: 35rem;
+        max-height: 50rem;
+      }
+      @include custom(990) {
+        max-width: none;
+        order: 1;
+        padding-top: 2rem;
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
-    @include custom(1065) {
-      max-width: 30rem;
-      max-height: 25rem;
-    }
-    @include custom(990) {
-      max-width: none;
-      max-height: 35rem;
-      order: 1;
-      padding-top: 2rem;
-    }
-    video {
-      width: 100%;
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20%;
       height: 100%;
-      object-fit: cover;
+      background: linear-gradient(
+        90deg,
+        rgb(0, 0, 0),
+        rgb(0, 0, 0),
+        rgba(0, 0, 0, 0) 71%
+      );
+      z-index: 3;
+    }
+    .bg2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20%;
+      height: 100%;
+      background: linear-gradient(
+        270deg,
+        rgb(0, 0, 0),
+        rgb(0, 0, 0),
+        rgba(0, 0, 0, 0) 71%
+      );
+      z-index: 3;
     }
   }
 }
