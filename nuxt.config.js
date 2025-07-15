@@ -1,6 +1,8 @@
 import dotenv from 'dotenv'
 dotenv.config()
 
+const url = "https://onpromo.by"
+
 export default {
   target: 'static',
   head: {
@@ -33,8 +35,8 @@ export default {
         content: "ONPROMO.BY"
       },
       {
-        property: 'og:image',
-        content: 'https://onpromo.by/favicons/logo.png',
+        property: "og:url",
+        content: url
       },
       {
         property: 'og:description',
@@ -42,11 +44,15 @@ export default {
       },
       {
         name: 'twitter:card',
-        content: '/favicons/logo.ico',
+        content: url + '/favicons/logo.png',
       },
       {
         name: 'twitter:image',
-        content: 'https://onpromo.by/favicons/logo.png',
+        content: url + '/favicons/logo.png',
+      },
+      {
+        property: 'og:image',
+        content: url + '/favicons/logo.png',
       },
       {
         name: 'twitter:title',
