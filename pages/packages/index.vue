@@ -4,33 +4,37 @@
       <div :class="$style.title">Пакеты</div>
       <div :class="$style.tabs">
         <div
-          :class="[$style.tab, { [$style.active]: activeTab === 'Пакет 450$' }]"
-          @click="activeTab = 'Пакет 450$'"
+          :class="[$style.tab, { [$style.active]: activeTab === 0 }]"
+          @click="activeTab = 0"
         >
           <div><span>Пакет</span> 450$</div>
         </div>
         <div
-          :class="[$style.tab, { [$style.active]: activeTab === 'Пакет 600$' }]"
-          @click="activeTab = 'Пакет 600$'"
+          :class="[$style.tab, { [$style.active]: activeTab === 1 }]"
+          @click="activeTab = 1"
         >
           <div><span>Пакет</span> 600$</div>
         </div>
         <div
-          :class="[$style.tab, { [$style.active]: activeTab === 'Пакет 650$' }]"
-          @click="activeTab = 'Пакет 650$'"
+          :class="[$style.tab, { [$style.active]: activeTab === 2 }]"
+          @click="activeTab = 2"
         >
           <div><span>Пакет</span> 650$</div>
         </div>
         <div
-          :class="[$style.tab, { [$style.active]: activeTab === 'Пакет 800$' }]"
-          @click="activeTab = 'Пакет 800$'"
+          :class="[$style.tab, { [$style.active]: activeTab === 3 }]"
+          @click="activeTab = 3"
         >
           <div><span>Пакет</span> 800$</div>
         </div>
       </div>
       <div :class="$style.packages">
-        <div :class="$style.package" v-for="item in packages" :key="item.title">
-          <div v-if="item.name === activeTab">
+        <div
+          :class="$style.package"
+          v-for="(item, index) in packages"
+          :key="item.title"
+        >
+          <div v-if="index === activeTab">
             <div :class="$style.packageTitle">{{ item.name }}</div>
             <div :class="$style.image">
               <img :src="item.preview_image" alt="" />
@@ -72,7 +76,7 @@ export default {
   },
   data() {
     return {
-      activeTab: 'Пакет 450$',
+      activeTab: 0,
     }
   },
 }
