@@ -124,8 +124,11 @@ export default {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          @include custom(390) {
+          @include custom(500) {
             font-size: 1rem;
+          }
+          @include custom(400) {
+            font-size: 0.86rem;
           }
         }
         &:first-child {
@@ -145,6 +148,9 @@ export default {
         margin: 0 0 1rem 0;
         font-size: 2.5rem;
         border-bottom: 0.125rem solid $white;
+        @include custom(500) {
+          font-size: 2rem;
+        }
       }
       .image {
         max-width: 50rem;
