@@ -113,7 +113,7 @@ export default {
       grid-template-columns: 3fr 1fr;
       align-items: baseline;
       gap: 1rem;
-      @include custom(550) {
+      @include custom(730) {
         grid-template-columns: 1fr;
       }
       .desc {
@@ -122,6 +122,14 @@ export default {
         margin: 0 0 4rem 0;
         @include custom(950) {
           margin: 0 0 2rem 0;
+        }
+        p {
+          max-width: 44rem;
+          margin: 0 0 0.5rem 0;
+        }
+        img {
+          max-width: 100%;
+          object-fit: cover;
         }
       }
       .manufacturer {
