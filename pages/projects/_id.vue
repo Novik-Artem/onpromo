@@ -16,13 +16,16 @@
     <div :class="$style.content">
       <div :class="$style.title">{{ project.name }}</div>
       <div :class="$style.desc" v-html="project.description"></div>
-      <div :class="$style.gallery">
+      <div
+        :class="$style.gallery"
+        v-if="project.images?.some((item) => item.image != null)"
+      >
         <div
           v-for="item in project.images"
           :key="item.image"
           :class="$style.item"
         >
-          <img :src="item.image" alt="" />
+          <img v-if="item.image != null" :src="item.image" alt="" />
         </div>
       </div>
       <div :class="$style.videos" v-if="project.videos">
