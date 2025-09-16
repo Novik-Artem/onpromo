@@ -15,13 +15,16 @@
           <span>Производитель</span> {{ equipment.manufacturer }}
         </div>
       </div>
-      <div :class="$style.gallery">
+      <div
+        :class="$style.gallery"
+        v-if="equipment.images?.some((item) => item.image != null)"
+      >
         <div
           v-for="item in equipment.images"
           :key="item.image"
           :class="$style.item"
         >
-          <img :src="item.image" alt="" />
+          <img v-if="item.image != null" :src="item.image" alt="" />
         </div>
       </div>
       <div :class="$style.videos" v-if="equipment.videos">
@@ -48,7 +51,6 @@
 export default {
   async mounted() {
     await this.$store.dispatch('equipment/getItem', this.$route.params.id)
-    console.log(this.equipment)
   },
   computed: {
     equipment() {
