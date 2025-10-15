@@ -52,15 +52,15 @@ export default {
       },
       {
         name: 'twitter:card',
-        content: url + '/favicons/logo.png',
+        content: url + '/favicons/logo-black.png',
       },
       {
         name: 'twitter:image',
-        content: url + '/favicons/logo.png',
+        content: url + '/favicons/logo-black.png',
       },
       {
         property: 'og:image',
-        content: url + '/favicons/logo.png',
+        content: url + '/favicons/logo-black.png',
       },
       {
         name: 'twitter:title',
